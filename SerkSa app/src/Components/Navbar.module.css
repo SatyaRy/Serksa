@@ -1,0 +1,156 @@
+  .Navbar{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    height: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    width: 100%;
+    grid-area: header;
+  }
+  .Navlist{
+    display: none;
+    justify-content: space-evenly;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: normal;
+    color: white;
+    width: 50%;
+    gap: 50px;
+  }
+  .Logo{
+    font-size: 2.5rem;
+    height: 50px;
+    background-image:linear-gradient(90deg,#FF3BFF 0%,#ECBFBF 38%,#5C24FF 76% ,#D94FD5 100%) ;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    gap: 50px;
+    background-size: cover;
+  }
+  .Bar{
+    width: 120px;
+    height: 50px;
+    display: flex;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+  }
+  .NavbarI{
+    padding-top: 15px;
+  }
+  a{
+    text-decoration: none;
+    color: white;
+  }
+  .NavbarI::before{
+    content:"";
+    position: absolute;
+    width: 0vw;
+    height: 1px;
+    top: 130px;
+    background-color: white;
+    transition: all linear 0.5s;
+  }
+  .NavbarI:nth-child(1):hover::before{
+    width: 4vw;
+  }
+  .NavbarI:nth-child(2):hover::before{
+    width: 7.5vw;
+  }
+  .NavbarI:nth-child(3):hover::before{
+    width: 6vw;
+  }
+  .NavbarI:nth-child(4):hover::before{
+    width: 6vw;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*media query for mobile pre-defined*/
+  /* xs */
+  @media (max-width: 475px){
+    .container {
+      max-width: 100%;
+      grid-template-areas: 
+        "header header header"
+        "main main main"
+        "footer footer footer"
+      ;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 100px 200px 200px;
+    }
+  }
+  @media (min-width: 475px) {
+    .container {
+      max-width: 100%;
+      grid-template-areas: 
+        "header header header"
+        "main main main"
+        "footer footer footer"
+      ;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 100px 200px 200px;
+    }
+
+  }
+  
+  /* sm */
+  @media (min-width: 640px) {
+    .container {
+      max-width: 100%;
+    }
+  }
+  
+  /* md */
+  @media (min-width: 768px) {
+    .container {
+      max-width: 100%;
+    }
+    .Navlist{
+      width: 60%;
+    }
+  }
+  
+  /* lg */
+  @media (min-width: 1024px) {
+    .Navlist{
+      display: flex;
+    }
+    .fa-solid.fa-bars{
+      display: none;
+    }
+    .Navlist{
+      width: 80%;
+    }
+
+    
+
+   
+  }
+  
+  /* xl */
+  @media (min-width: 1280px) {
+    .Navlist{
+      width: 60%;
+    }
+   
+  }
+  
+  /* 2xl */
+  @media (min-width: 1536px) {
+   
+  }

@@ -1,0 +1,119 @@
+*{
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+body{
+    background-image: linear-gradient(110deg, #160022 52%, #560088 100%);
+    background-repeat: no-repeat;
+    object-fit: cover;
+    background-attachment: fixed;
+  }
+@font-face {
+  font-family: sf-pro;
+  src: url(assets/SF-Pro.ttf);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*media query for mobile pre-defined*/
+  /* xs */
+  @media (max-width: 475px){
+    .container {
+      max-width: 100%;
+      grid-template-areas: 
+        "header header header"
+        "main main main"
+        "footer footer footer"
+      ;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 100px 200px 200px;
+    }
+  }
+  @media (min-width: 475px) {
+    .container {
+      max-width: 100%;
+      grid-template-areas: 
+        "header header header"
+        "main main main"
+        "footer footer footer"
+      ;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 100px 200px 200px;
+    }
+
+  }
+  
+  /* sm */
+  @media (min-width: 640px) {
+    .container {
+      max-width: 100%;
+    }
+  }
+  
+  /* md */
+  @media (min-width: 768px) {
+    .container {
+      max-width: 100%;
+    }
+    .Navlist{
+      width: 60%;
+    }
+  }
+  
+  /* lg */
+  @media (min-width: 1024px) {
+    .Navlist{
+      display: flex;
+    }
+    .fa-solid.fa-bars{
+      display: none;
+    }
+    .Navlist{
+      width: 80%;
+    }
+
+    
+
+   
+  }
+  
+  /* xl */
+  @media (min-width: 1280px) {
+    .Navlist{
+      width: 60%;
+    }
+   
+  }
+  
+  /* 2xl */
+  @media (min-width: 1536px) {
+   
+  }

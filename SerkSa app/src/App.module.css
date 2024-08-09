@@ -7,6 +7,26 @@
         "main main main"
         "footer footer footer";
     grid-template-columns: repeat(auto-fit, minmax(400px,1fr));
-    grid-template-rows: 200px 500px 100px ;
+    grid-template-rows: 100px 500px 100px ;
     height: 100vh;
+}
+.main{
+    display: grid;
+    grid-area: main;
+    grid-template-areas: 
+        "landing landing landing"
+        "about about about"
+        "feature feature feature"
+    ;
+    grid-template-columns: repeat(auto-fit,minmax(400px, 1fr));
+    grid-template-rows: 700px 400px 400px;
+}
+.landing{
+    display: flex;
+    justify-content: start;
+    background-image: linear-gradient(110deg, #160022 52%, #560088 100%);
+    background-repeat: no-repeat;
+    object-fit: cover;
+    background-attachment: fixed;
+    grid-area: landing;
 }

@@ -8,6 +8,11 @@
     padding-top: 20px;
     width: 100%;
     grid-area: header;
+    background-image: linear-gradient(110deg, #160022 52%, #560088 100%);
+    background-repeat: no-repeat;
+    object-fit: cover;
+    background-attachment: fixed;
+    border-bottom: solid white;
   }
   .Navlist{
     display: none;
@@ -66,8 +71,22 @@
   .NavbarI:nth-child(4):hover::before{
     width: 6vw;
   }
-
-
+  .menu{
+    color: white;
+    font-size: 2.5rem;
+  }
+  .SerksaLogo{
+    display: flex;
+    gap: 20px;
+  }
+  .SerkSaText{
+    font-size: 16px;
+    font-weight: normal;
+    padding-top: 2vh;
+    color: white;
+  }
+ 
+  
 
 
 
@@ -135,6 +154,9 @@
     }
     .Navlist{
       width: 80%;
+    }
+    .fa-solid.fa-xmark{
+      display: none;
     }
 
     

@@ -3,9 +3,8 @@
     justify-content:space-between;
     align-items: center;
     height: 100%;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 20px;
+    padding-left: 5vw;
+    padding-right: 5vw;
     width: 100%;
     grid-area: header;
     background-image: linear-gradient(110deg, #160022 52%, #560088 100%);
@@ -55,7 +54,7 @@
     position: absolute;
     width: 0vw;
     height: 1px;
-    top: 130px;
+    top: 80px;
     background-color: white;
     transition: all linear 0.5s;
   }
@@ -73,19 +72,24 @@
   }
   .menu{
     color: white;
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
   .SerksaLogo{
     display: flex;
     gap: 20px;
+    height: 58px;
+    width: 20%;
+    align-items: center;
+    justify-content: start;
   }
   .SerkSaText{
-    font-size: 16px;
+    font-size: 1.2rem;
     font-weight: normal;
-    padding-top: 2vh;
     color: white;
+    padding-top: 0.2vh;
   }
- 
+  
+
   
 
 

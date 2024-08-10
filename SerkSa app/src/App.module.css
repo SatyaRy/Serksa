@@ -7,7 +7,7 @@
         "main main main"
         "footer footer footer";
     grid-template-columns: repeat(auto-fit, minmax(400px,1fr));
-    grid-template-rows: 100px 500px 100px ;
+    grid-template-rows: 80px auto 100px ;
     height: 100vh;
 }
 .main{
@@ -19,7 +19,7 @@
         "feature feature feature"
     ;
     grid-template-columns: repeat(auto-fit,minmax(400px, 1fr));
-    grid-template-rows: 700px 400px 400px;
+    grid-template-rows: auto 400px 400px;
 }
 .landing{
     display: flex;
@@ -29,4 +29,16 @@
     object-fit: cover;
     background-attachment: fixed;
     grid-area: landing;
+    padding-bottom: 3vh;
 }
+.nav{
+    grid-area: header;
+    align-items: center;
+}
+@media (max-width: 768px) {
+    .main{
+        grid-template-rows: auto 400px 400px;
+    }
+}
+
+

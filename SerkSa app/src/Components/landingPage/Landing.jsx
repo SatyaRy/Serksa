@@ -1,18 +1,7 @@
 import robot from '../../assets/icon/robot.svg'
 import style from './Landing.module.css'
 import MediaQuery from 'react-responsive'
-import { useMediaQuery } from 'react-responsive'
 function LandingPage(){
-    const Example = () =>
-   {
-        const isDesktopOrLaptop = useMediaQuery({
-        query: '(min-width: 1224px)'
-        })
-        const isBigScreen = useMediaQuery({ query: '(min-width: 1824px)' })
-        const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' })
-        const isPortrait = useMediaQuery({ query: '(orientation: portrait)' })
-        const isRetina = useMediaQuery({ query: '(min-resolution: 2dppx)' })
-    }
     return(
            <>
                  <MediaQuery maxWidth={768}>

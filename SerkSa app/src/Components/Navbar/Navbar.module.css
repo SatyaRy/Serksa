@@ -88,12 +88,38 @@
     color: white;
     padding-top: 0.2vh;
   }
-  
+  .menu{
+    font-size:2rem;
+    color:white;
+    display: flex;
+    font-weight: bold;
+    padding-top: 0.2vh;
+    z-index: 1;
+  }
 
-  
+  .out{
+    font-size:2rem;
+    color:white;
+    display: flex;
+    padding-top: 0.2vh;
+    z-index: 1;
+  }
+  .sectionIcon{
+    display: none;
 
-
-
+  }
+  .contactButton{
+    display: none;
+  }
+  .mainButton{
+    width: 100%;
+    justify-content: start;
+    align-items: start;
+    overflow: hidden;
+    bottom:1vh;
+    display: none;
+  }
+ 
 
 
 
@@ -105,46 +131,67 @@
 
 /*media query for mobile pre-defined*/
   /* xs */
-  @media (max-width: 475px){
-    .container {
-      max-width: 100%;
-      grid-template-areas: 
-        "header header header"
-        "main main main"
-        "footer footer footer"
-      ;
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-template-rows: 100px 200px 200px;
-    }
-  }
-  @media (min-width: 475px) {
-    .container {
-      max-width: 100%;
-      grid-template-areas: 
-        "header header header"
-        "main main main"
-        "footer footer footer"
-      ;
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-template-rows: 100px 200px 200px;
+  @media (max-width: 1023px){
+    .NavlistActive{
+      display: flex;
+      position: absolute;
+      flex-direction: column;
+      justify-content: space-evenly;
+      text-align: start;
+      font-size: 1.2rem;
+      font-weight: normal;
+      color: white;
+      width: 100%;
+      right: 0.1vh;
+      height: 109vh;
+      top: 10vh;
+      background-image: linear-gradient(110deg, #160022 52%, #560088 100%);
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      padding-left: 15vw;
+      padding-bottom: 65vh;
     }
 
+    .NavbarI{
+      padding-top:0.1vh;
+      padding-bottom: 0.1vh;
+    }
+    .sectionIcon{
+      position: absolute;
+      display: flex;
+      color: white;
+      font-size: 2rem;
+      left: 5vw;
+    }
+    .contactButton{
+      display: flex;
+      width: 374.65px;
+      height: 49.05px;
+      justify-content: center;
+      align-items: center;
+      border: #560088;
+      border-radius: 24px;
+    }
+    .Bar{
+      display: none;
+    }
+    .mainButton{
+      display: flex;
+    }
+
+
+  }
+  @media (max-width: 475px) {
   }
   
   /* sm */
   @media (min-width: 640px) {
-    .container {
-      max-width: 100%;
-    }
   }
   
   /* md */
   @media (min-width: 768px) {
     .container {
       max-width: 100%;
-    }
-    .Navlist{
-      width: 60%;
     }
   }
   
@@ -153,15 +200,16 @@
     .Navlist{
       display: flex;
     }
-    .fa-solid.fa-bars{
-      display: none;
-    }
     .Navlist{
       width: 80%;
     }
-    .fa-solid.fa-xmark{
+    .dropDown{
       display: none;
     }
+    .NavlistActive{
+      display: none;
+    }
+    
 
     
 

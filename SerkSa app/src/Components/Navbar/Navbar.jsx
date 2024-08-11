@@ -12,6 +12,7 @@ function Navbar(){
     const handleClick = ()=>{
         setClick(!click)
     }
+
     return (
             <>
                 <MediaQuery maxWidth={1023}>
@@ -24,8 +25,23 @@ function Navbar(){
                             {click?<RxCrossCircled onClick={handleClick} className={styles.menu}/>: <CiMenuBurger onClick={handleClick} className={styles.out}/> }
                             </div>
                     </div>
-                    <div className ={styles.showMenu}>
-                   
+                    <div className ={click? styles.showMenu: styles.hideMenu}>
+                       <div className ={styles.menuList}>
+                           {<FaHome className={styles.sectionIcon}/>}
+                           {<FaHandHoldingUsd className={styles.sectionIcon}/>}
+                           {<FaQuestionCircle className={styles.sectionIcon}/>}
+                           {<FaProjectDiagram className={styles.sectionIcon}/>}
+
+                       </div>
+                       <div className ={styles.menuDetail}>
+                          <h4>Home</h4>
+                          <h4>Our services</h4>
+                          <h4>Why SERKSA</h4>
+                          <h4>About Us</h4>
+                       </div>
+                        <div className ={styles.contactButton}>
+                              <button id ={styles.contact}>Contact Us</button>
+                        </div>
                     </div>
 
                 </MediaQuery>
@@ -36,10 +52,10 @@ function Navbar(){
                             <h4 className ={styles.SerkSaText}>SERKSA</h4>
                         </div>
                         <div className={styles.Navlist} >
-                            <a className={styles.NavbarI}href="">{<FaHome className={styles.sectionIcon}/>}Home</a>
-                            <a className={styles.NavbarI} href="">{<FaHandHoldingUsd className={styles.sectionIcon}/>}Our Services</a>
-                            <a className={styles.NavbarI} href="">{<FaQuestionCircle className={styles.sectionIcon}/>}About Us</a>
-                            <a className={styles.NavbarI} href="">{<FaProjectDiagram className={styles.sectionIcon}/>}Our Work</a>
+                            <a className={styles.NavbarI}href="">Home</a>
+                            <a className={styles.NavbarI} href="">Our Services</a>
+                            <a className={styles.NavbarI} href="">About Us</a>
+                            <a className={styles.NavbarI} href="">Our Work</a>
                             <a className={styles.Bar}>Sign Up</a>
                             <div className={styles.mainButton}>
                                 <button className ={styles.contactButton}>Contact Us</button>

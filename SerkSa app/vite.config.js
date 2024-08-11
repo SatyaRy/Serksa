@@ -8,7 +8,4 @@ export default defineConfig({
       localsConvention:"camelCase"
     }
   },
-  resolve: {
-    alias: [{ find: "@", replacement: resolve(__dirname, "./src") }]
-  }
 })

@@ -104,13 +104,6 @@
     padding-top: 0.2vh;
     z-index: 1;
   }
-  .sectionIcon{
-    display: none;
-
-  }
-  .contactButton{
-    display: none;
-  }
   .mainButton{
     width: 100%;
     justify-content: start;
@@ -119,6 +112,61 @@
     bottom:1vh;
     display: none;
   }
+  .showMenu{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(110deg, #160022 52%, #560088 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    object-fit: cover;
+    display: flex;
+    justify-content: start;
+    padding-left: 5vw;
+    padding-top: 5vh;
+    color: white;
+  }
+  .hideMenu{
+    display: none;
+  }
+  .menuList{
+    width: 10%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+  }
+  .sectionIcon{
+    font-size: 2.5rem;
+  }
+  .menuDetail{
+    width: 60%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+    padding-left: 3vw;
+    font-size: 1.5rem;
+  }
+  .contactButton{
+    top:85vh;
+    position: absolute;
+    width: 90%;
+    height: 10%;
+    justify-content: center;
+    display: flex;
+
+  }
+  #contact{
+    background-color: #872CFF;
+    color: white;
+    border: none;
+    border-radius: 44px;
+    font-size: 1.5rem;
+    width: 100%;
+    height: 80%;
+  }
+
  
 
 
@@ -132,52 +180,7 @@
 /*media query for mobile pre-defined*/
   /* xs */
   @media (max-width: 1023px){
-    .NavlistActive{
-      display: flex;
-      position: absolute;
-      flex-direction: column;
-      justify-content: space-evenly;
-      text-align: start;
-      font-size: 1.2rem;
-      font-weight: normal;
-      color: white;
-      width: 100%;
-      right: 0.1vh;
-      height: 109vh;
-      top: 10vh;
-      background-image: linear-gradient(110deg, #160022 52%, #560088 100%);
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      padding-left: 15vw;
-      padding-bottom: 65vh;
-    }
 
-    .NavbarI{
-      padding-top:0.1vh;
-      padding-bottom: 0.1vh;
-    }
-    .sectionIcon{
-      position: absolute;
-      display: flex;
-      color: white;
-      font-size: 2rem;
-      left: 5vw;
-    }
-    .contactButton{
-      display: flex;
-      width: 374.65px;
-      height: 49.05px;
-      justify-content: center;
-      align-items: center;
-      border: #560088;
-      border-radius: 24px;
-    }
-    .Bar{
-      display: none;
-    }
-    .mainButton{
-      display: flex;
-    }
 
 
   }

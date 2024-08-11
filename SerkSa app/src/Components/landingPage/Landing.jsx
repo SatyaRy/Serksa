@@ -23,6 +23,7 @@ function LandingPage(){
                             <button className={style.work}>How our app works</button>
                             <button className={style.learn}>Learn more</button>
                         </div>
+                        <h1>hello world</h1>
                         <img src={robot} className={style.robot}/>
                     </div>
                  </MediaQuery>

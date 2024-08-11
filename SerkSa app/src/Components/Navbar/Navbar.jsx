@@ -25,10 +25,7 @@ function Navbar(){
                             </div>
                     </div>
                     <div className ={styles.showMenu}>
-                        <a href="">{<FaHome className={styles.sectionIcon}/>}Home</a>
-                        <a href=""></a>
-                        <a href=""></a>
-                        <a href=""></a>
+                   
                     </div>
 
                 </MediaQuery>

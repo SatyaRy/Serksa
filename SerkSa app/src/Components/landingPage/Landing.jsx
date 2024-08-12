@@ -4,7 +4,7 @@ import MediaQuery from 'react-responsive'
 function LandingPage(){
     return(
            <>
-                 <MediaQuery maxWidth={768}>
+                 <MediaQuery maxWidth={600}>
                     <div class ={style.Mainlanding}>
                         <h4 className={style.application}>SerkSa Application</h4>
                         <h4 className={style.description}>We created a gamified app to enhance high school learning experiences.</h4>
@@ -16,9 +16,10 @@ function LandingPage(){
                             <button className={style.work}>How our app works</button>
                             <button className={style.learn}>Learn more</button>
                         </div>
+                        <h4 className ={style.shortDetail}>“ Fun learning is an engaging and enjoyable process that makes acquiring knowledge feel like play rather than work!! “.</h4>
                     </div>
                  </MediaQuery>
-                 <MediaQuery minWidth={769}>
+                 <MediaQuery minWidth={600}>
                     <div class ={style.Mainlanding}>
                         <h4 className={style.application}>SerkSa Application</h4>
                         <h4 className={style.description}>We created a gamified app to enhance high school learning experiences.</h4>

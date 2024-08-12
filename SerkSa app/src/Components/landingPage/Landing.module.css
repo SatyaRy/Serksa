@@ -84,18 +84,6 @@
     object-fit: cover;
     filter: blur(40px);
     -webkit-filter: blur(40px);
-    animation: 5s bouncing  linear infinite;
-    animation-direction: alternate; 
-}
-@keyframes bouncing {
-    from{
-        transform: translateY(400px);
-        transform: rotate3d(0deg)
-        
-    }
-    to{
-       transform:translateY(0px); ;
-    }
 }
 
 .animateRobotI{
@@ -109,6 +97,7 @@
     width: 50%;
     height: 50%;
     top: 30vh;
+    left:10vh ;
     position: absolute;
     border-radius: 50%;
     background-color: white;
@@ -121,34 +110,31 @@
     object-fit: cover;
     filter: blur(70px);
     -webkit-filter: blur(70px);
-    animation: 5s bouncing  linear infinite;
-    background-size: 150% 150%;
+    animation: 10s bouncingI  linear infinite;
+    animation-direction: alternate;
 }
+.shortDetail{
+    color: white;
+    padding-left: 5vw;
+    font-size: 14px;
+    margin-top: -3vh;
+    font-weight: 100;
+    padding-right: 10vw;
+}
+
+
+
+
+
+
 @keyframes bouncingI {
     from{
-        transform: translateY(400px);
-        background-size: 100% 100%;
-        transform: rotate3d(0deg)
+        transform: translateY(0);
     }
     to{
-       transform:translateY(0px); ;
-       background-size: 150% 150%;
-       transform: rotate3d(360deg)
+       transform:translateY(400px); ;
     }
 }
-
-  
-  
-
-  
-
-
-
-
-
-
-
-
 
 /*media query for mobile pre-defined*/
   /* xs */
@@ -160,33 +146,10 @@
 
   }
   
-  /* sm */
-  @media (min-width: 640px) {
-      .Mainlanding{
-        text-align: center;
-        align-items: center;
-       }
-       .button{
-           flex-direction: row;
-           padding-left: 5vw;
-       }
-       .robot{
-           width: 100%;
-           height: auto;
-       }
-       .description{
-        font-size: 3rem;
-        width: 95%;
-       }
-        .application{
-            font-size: 2rem;
-        }
-        }
-        
-  
+
   /* md */
   @media (min-width: 768px) {
-   
+
   }
   
   /* lg */
@@ -212,9 +175,11 @@
         font-size: 2rem;
     }
     .button{
+        padding-left: 10vh;
         flex-direction: row;
     }
    
+
   }
   
   /* xl */
@@ -224,7 +189,7 @@
   @media (min-width: 1536px) {
    
   }
-  @media (max-width: 768px) {
+  @media (max-width: 600px) {
     .Mainlanding{
      text-align: start;
      align-items: start;
@@ -233,13 +198,13 @@
         flex-direction: column;
         padding-left: 5vw;
         width: 100%;
-        height: 20%;
+        height: auto;
         justify-content: center;
         align-items:center;
     }
     .robot{
         width: 100%;
-        height:30vh;
+        height: 30vh;
         margin-top: 3vh;
 
     }
@@ -252,6 +217,7 @@
         height: 50px;
     }
     .description{
+        font-size: 2rem;
         padding-left: 5vw;
     }
     .application{

@@ -19,7 +19,7 @@
         "feature feature feature"
     ;
     grid-template-columns: repeat(auto-fit,minmax(400px, 1fr));
-    grid-template-rows: auto 400px 400px;
+    grid-template-rows: auto auto 400px;
 }
 .landing{
     display: flex;
@@ -29,14 +29,32 @@
     object-fit: cover;
     background-attachment: fixed;
     grid-area: landing;
-    padding-bottom: 10vh;
+    padding-bottom: 5vh;
     overflow: hidden;
     z-index: -1;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
 .nav{
     grid-area: header;
     align-items: center;
 }
+.aboutPage{
+    grid-area: about;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border: solid black
+
+}
+
+
+
+
+
+
+
+/*media query*/
 @media (max-width: 768px) {
     .main{
         grid-template-rows: auto 400px 400px;

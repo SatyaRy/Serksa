@@ -54,7 +54,7 @@
     position: absolute;
     width: 0vw;
     height: 1px;
-    top: 80px;
+    top: 7vh;
     background-color: white;
     transition: all linear 0.5s;
   }
@@ -115,7 +115,7 @@
   .showMenu{
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 110vh;
     background-image: linear-gradient(110deg, #160022 52%, #560088 100%);
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -134,22 +134,22 @@
     height: 60%;
     display: flex;
     flex-direction: column;
-    gap: 60px;
+    gap: 40px;
   }
   .sectionIcon{
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
   .menuDetail{
     width: 60%;
     height: auto;
     display: flex;
     flex-direction: column;
-    gap: 70px;
+    gap: 48px;
     padding-left: 3vw;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
   }
   .contactButton{
-    top:85vh;
+    top:98vh;
     position: absolute;
     width: 90%;
     height: 10%;
@@ -163,7 +163,7 @@
     border: none;
     border-radius: 44px;
     font-size: 1.5rem;
-    width: 100%;
+    width: 80%;
     height: 80%;
   }
 

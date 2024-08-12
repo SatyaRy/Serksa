@@ -6,6 +6,7 @@ import { IoMenuSharp } from "react-icons/io5";
 import { CiMenuBurger } from "react-icons/ci";
 import { RxCrossCircled } from "react-icons/rx";
 import { FaHome,FaHandHoldingUsd,FaQuestionCircle ,FaProjectDiagram} from "react-icons/fa";
+import { IoMenu } from "react-icons/io5";
 import MediaQuery from 'react-responsive'
 function Navbar(){
     const [click, setClick] = useState(false)
@@ -27,7 +28,7 @@ function Navbar(){
                     </div>
                     <div className ={click? styles.showMenu: styles.hideMenu}>
                        <div className ={styles.menuList}>
-                           {<FaHome className={styles.sectionIcon}/>}
+                           {<IoMenu className={styles.sectionIcon}/>}
                            {<FaHandHoldingUsd className={styles.sectionIcon}/>}
                            {<FaQuestionCircle className={styles.sectionIcon}/>}
                            {<FaProjectDiagram className={styles.sectionIcon}/>}

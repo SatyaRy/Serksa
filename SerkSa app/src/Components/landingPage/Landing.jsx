@@ -1,4 +1,4 @@
-import robot from '../../assets/icon/robot.svg'
+import robot from '../../assets/icon/Logo2.svg'
 import style from './Landing.module.css'
 import MediaQuery from 'react-responsive'
 function LandingPage(){
@@ -8,7 +8,10 @@ function LandingPage(){
                     <div class ={style.Mainlanding}>
                         <h4 className={style.application}>SerkSa Application</h4>
                         <h4 className={style.description}>We created a gamified app to enhance high school learning experiences.</h4>
-                        <img src={robot} className={style.robot}/>
+                        <div className ={style.animateRobot}>
+                            <div></div>
+                             <img src={robot} className={style.robot}/>
+                        </div>
                         <div className ={style.button}>
                             <button className={style.work}>How our app works</button>
                             <button className={style.learn}>Learn more</button>
@@ -23,8 +26,10 @@ function LandingPage(){
                             <button className={style.work}>How our app works</button>
                             <button className={style.learn}>Learn more</button>
                         </div>
-                        <h1>hello world</h1>
-                        <img src={robot} className={style.robot}/>
+                        <div className ={style.animateRobotI}>
+                            <div></div>
+                             <img src={robot} className={style.robot}/>
+                        </div>
                     </div>
                  </MediaQuery>
               

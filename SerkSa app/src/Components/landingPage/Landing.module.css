@@ -6,15 +6,14 @@
     color: transparent;
     font-size: 1.2rem;
     padding-top: 5vh;
-    padding-left: 5vw;
+    font-weight: 400;
 }
 .description{
     padding-top: 2vh;
     width: 50%;
     font-size: 2rem;
     color: white;
-    font-weight: normal;
-    padding-left: 5vw;
+    font-weight: 400;
 }
 .Mainlanding{
     display: flex;
@@ -30,19 +29,20 @@
     justify-content: center;
     width: 100%;
     height: 100%;
-    padding-top: 5vh;
     object-fit: cover;
 
 
 }
 .button{
-    padding-top: 5vh;
     display: flex;
+    height: auto;
+    margin-top: 5vh;
     gap: 20px;
     width: 100%;
+    padding-right: 5vw;
+    padding-bottom: 5vh;
     justify-content: center;
-    align-items: start;
-    padding-left: 5vw;
+    align-items: center;
 }
 .work{
     width: 240px;
@@ -60,8 +60,87 @@
     font-size: 20px;
     border-radius: 8px;
 }
+.animateRobot{
+    width: 100%;
+    height: 30vh;
+    overflow: hidden;
+}
+.animateRobot div:nth-child(1){
+    width: 350px;
+    height: 350px;
+    left: 5vh;
+    opacity: 70%;
+    top: 50vh;
+    position: absolute;
+    border-radius: 50%;
+    background-color: white;
+    z-index: -1;
+    align-items: center;
+    border: none;
+    background: #FF4DE5;
+    background: linear-gradient(90deg, #B224EF  , #7579FF);
+    animation: moveBackground 10s linear infinite;
+    background-size: cover;
+    object-fit: cover;
+    filter: blur(40px);
+    -webkit-filter: blur(40px);
+    animation: 5s bouncing  linear infinite;
+    animation-direction: alternate; 
+}
+@keyframes bouncing {
+    from{
+        transform: translateY(400px);
+        transform: rotate3d(0deg)
+        
+    }
+    to{
+       transform:translateY(0px); ;
+    }
+}
 
+.animateRobotI{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    justify-content: center;
+    object-fit: cover;
+}
+.animateRobotI div:nth-child(1){
+    width: 50%;
+    height: 50%;
+    top: 30vh;
+    position: absolute;
+    border-radius: 50%;
+    background-color: white;
+    z-index: -1;
+    align-items: center;
+    border: none;
+    background: #FF4DE5;
+    background: linear-gradient(90deg, #B224EF  , #7579FF);
+    animation: moveBackground 10s linear infinite;
+    object-fit: cover;
+    filter: blur(70px);
+    -webkit-filter: blur(70px);
+    animation: 5s bouncing  linear infinite;
+    background-size: 150% 150%;
+}
+@keyframes bouncingI {
+    from{
+        transform: translateY(400px);
+        background-size: 100% 100%;
+        transform: rotate3d(0deg)
+    }
+    to{
+       transform:translateY(0px); ;
+       background-size: 150% 150%;
+       transform: rotate3d(360deg)
+    }
+}
 
+  
+  
+
+  
 
 
 
@@ -103,7 +182,7 @@
             font-size: 2rem;
         }
         }
-  
+        
   
   /* md */
   @media (min-width: 768px) {
@@ -115,12 +194,19 @@
     .robot{
         width: 100%;
         height: 100%;
+        left: 10vh;
         object-fit: cover;
         padding-top: 1vh;
     }
+    .animateRobotI{
+        margin-top: -50px;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
     .description{
         font-size: 3rem;
-        width: 75%;
+        width: 60%;
     }
     .application{
         font-size: 2rem;
@@ -145,18 +231,33 @@
     }
     .button{
         flex-direction: column;
+        padding-left: 5vw;
+        width: 100%;
+        height: 20%;
+        justify-content: center;
+        align-items:center;
     }
     .robot{
         width: 100%;
-        height:auto;
+        height:30vh;
+        margin-top: 3vh;
+
     }
     .work{
-        width: 360px;
+        width: 95%;
         height: 50px;
     }
     .learn{
-        width: 360px;
+        width: 95%;
         height: 50px;
     }
-   }
+    .description{
+        padding-left: 5vw;
+    }
+    .application{
+        padding-left: 5vw;
+    }
+  }
+  @media (max-width: 430px) {
+  }
  

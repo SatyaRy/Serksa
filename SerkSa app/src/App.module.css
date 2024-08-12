@@ -29,8 +29,9 @@
     object-fit: cover;
     background-attachment: fixed;
     grid-area: landing;
-    padding-bottom: 3vh;
+    padding-bottom: 10vh;
     overflow: hidden;
+    z-index: -1;
 }
 .nav{
     grid-area: header;

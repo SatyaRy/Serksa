@@ -1,0 +1,35 @@
+
+.question{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.section{
+    display : flex;
+    width: 100%;
+    height: 10vh;
+    justify-content: center;
+}
+.section img{
+    width: 100px; 
+    height: 100px;
+}
+.section h1{
+    padding-top: 4vh;
+    font-size: 24px;
+    color: #2E0148;
+}
+.paragraph{
+    padding-left: 5vw;
+    padding-right: 5vw;
+    font-size: 14px;
+    font-weight: 100;
+}
+.iphone{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding-top: 3vh;
+}

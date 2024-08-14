@@ -1,7 +1,29 @@
 import robot from '../../assets/icon/Logo2.svg'
 import style from './Landing.module.css'
 import MediaQuery from 'react-responsive'
+import {motion } from "framer-motion"
 function LandingPage(){
+    const animation={
+        hidden: {
+            marginLeft: "-100vw", 
+            opacity: 0.5
+        },
+        visable:{
+            marginLeft:"0", 
+            transition:{
+                delay: 1,
+                duration: 0.5
+            },
+            opacity: 1
+        },
+        hideRobot:{
+            translateY:"100vh"
+        },
+        showRobot:{
+            translateY: 0,
+            transition:{delay: 1, duration: 0.5}
+       }
+    }
     return(
            <>
                  <MediaQuery maxWidth={600}>
@@ -9,7 +31,6 @@ function LandingPage(){
                         <h4 className={style.application}>SerkSa Application</h4>
                         <h4 className={style.description}>We created a gamified app to enhance high school learning experiences.</h4>
                         <div className ={style.animateRobot}>
-                            <div></div>
                              <img src={robot} className={style.robot}/>
                         </div>
                         <div className ={style.button}>
@@ -20,7 +41,11 @@ function LandingPage(){
                     </div>
                  </MediaQuery>
                  <MediaQuery minWidth={600}>
-                    <div class ={style.Mainlanding}>
+                    <motion.div class ={style.Mainlanding}
+                        variants = {animation}
+                        initial ="hidden"
+                        animate ="visable"
+                        transition="visable">
                         <h4 className={style.application}>SerkSa Application</h4>
                         <h4 className={style.description}>We created a gamified app to enhance high school learning experiences.</h4>
                         <div className ={style.button}>
@@ -28,10 +53,14 @@ function LandingPage(){
                             <button className={style.learn}>Learn more</button>
                         </div>
                         <div className ={style.animateRobotI}>
-                            <div></div>
-                             <img src={robot} className={style.robot}/>
+                             <motion.img 
+                             variants={animation}
+                             initial= "hideRobot"
+                             animate="showRobot"
+                             transition="showRobot"
+                             src={robot} className={style.robot}/>
                         </div>
-                    </div>
+                    </motion.div>
                  </MediaQuery>
               
             </>

@@ -7,7 +7,24 @@
   font-family: sf-pro;
   src: url(assets/SF-Pro.ttf);
 }
-
+.signup{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border: solid white;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: linear-gradient(110deg, #160022 52%, #560088 100%);
+}
+.signup img{
+  width: 800px;
+  padding-right: 20vh;
+}
+.signup h1{
+  color: white;
+  font-size: 5rem;
+}
 
 
 

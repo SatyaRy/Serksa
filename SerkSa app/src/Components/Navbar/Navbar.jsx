@@ -7,62 +7,71 @@ import { CiMenuBurger } from "react-icons/ci";
 import { RxCrossCircled } from "react-icons/rx";
 import { FaHome,FaHandHoldingUsd,FaQuestionCircle ,FaProjectDiagram} from "react-icons/fa";
 import { IoMenu } from "react-icons/io5";
-import MediaQuery from 'react-responsive'
+import MediaQuery from 'react-responsive';
+import Signup from "../../pages/SignUp"
+import { Link } from 'react-router-dom';
+import {motion} from "framer-motion"
 function Navbar(){
     const [click, setClick] = useState(false)
     const handleClick = ()=>{
         setClick(!click)
-    }
-
+    };
+    const linkList = ["Home", "Our services" , "About us", "Our work"]
+    const link = ["/", "signup","/","ss"]
     return (
             <>
                 <MediaQuery maxWidth={1023}>
                     <div className={styles.Navbar}>
-                            <div class={styles.SerksaLogo}>
+                            <motion.div  transition={{delay:0.5}} initial = {{marginTop: 0}}animate ={{marginTop: 0}} className={styles.SerksaLogo}>
                                 <img src={Serksa} style ={{width:"60px" ,height:"58px"}}alt="" />
                                 <h4 className ={styles.SerkSaText}>SERKSA</h4>
-                            </div>
+                            </motion.div>
                             <div className ={styles.dropDown}>
                             {click?<RxCrossCircled onClick={handleClick} className={styles.menu}/>: <CiMenuBurger onClick={handleClick} className={styles.out}/> }
                             </div>
                     </div>
                     <div className ={click? styles.showMenu: styles.hideMenu}>
                        <div className ={styles.menuList}>
-                           {<IoMenu className={styles.sectionIcon}/>}
+                           {<FaHome className={styles.sectionIcon}/>}
                            {<FaHandHoldingUsd className={styles.sectionIcon}/>}
                            {<FaQuestionCircle className={styles.sectionIcon}/>}
                            {<FaProjectDiagram className={styles.sectionIcon}/>}
 
                        </div>
-                       <div className ={styles.menuDetail}>
-                          <h4>Home</h4>
-                          <h4>Our services</h4>
-                          <h4>Why SERKSA</h4>
-                          <h4>About Us</h4>
+                       <div className={styles.menuDetail}>
+                            {
+                                linkList.map((value)=>{
+                                    return(
+                                        <Link to="/">{value}</Link>
+                                    )
+                                })
+                            }
                        </div>
                         <div className ={styles.contactButton}>
-                              <button id ={styles.contact}>Contact Us</button>
+                              <button id ={styles.contact}><Link to="/signup">Contact Us</Link></button>
                         </div>
                     </div>
-
                 </MediaQuery>
                 <MediaQuery minWidth={1024}> 
-                    <div className={styles.Navbar}>
-                        <div class={styles.SerksaLogo}>
-                            <img src={Serksa} style ={{width:"60px" ,height:"58px"}}alt="" />
-                            <h4 className ={styles.SerkSaText}>SERKSA</h4>
-                        </div>
-                        <div className={styles.Navlist} >
-                            <a className={styles.NavbarI}href="">Home</a>
-                            <a className={styles.NavbarI} href="">Our Services</a>
-                            <a className={styles.NavbarI} href="">About Us</a>
-                            <a className={styles.NavbarI} href="">Our Work</a>
-                            <a className={styles.Bar}>Sign Up</a>
-                            <div className={styles.mainButton}>
-                                <button className ={styles.contactButton}>Contact Us</button>
+                            <div className={styles.Navbar}>
+                                <motion.div class={styles.SerksaLogo}   transition={{delay:0.5}} animate ={{marginTop: 0}}>
+                                    <img src={Serksa} style ={{width:"60px" ,height:"58px"}}alt="" />
+                                    <h4 className ={styles.SerkSaText}>SERKSA</h4>
+                                </motion.div>
+                                <div initial={{marginTop: -100}}animate={{marginTop: 0}} className={styles.Navlist} >
+                                    <motion.a className={styles.NavbarI}href="" 
+                                    animate={{marginTop:0}}
+                                    transition={{delay:0.5}}
+                                    >Home</motion.a>
+                                    <motion.a className={styles.NavbarI}href="" transition={{delay:0.5}} animate={{marginTop:0}}>Our services</motion.a>
+                                    <motion.a className={styles.NavbarI}href="" transition={{delay:0.5}} animate={{marginTop:0}}>About us</motion.a>
+                                    <motion.a className={styles.NavbarI}href="" transition={{delay:0.5}} animate={{marginTop:0}}>Our work</motion.a>        
+                                    <Link  to="/signup"><motion.h4 transition={{delay:0.5}}  animate={{marginTop:0}} className = {styles.sign}>Sign Up</motion.h4></Link>
+                                    <div className={styles.mainButton}>
+                                        <button className ={styles.contactButton}>Contact Us</button>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
                 </MediaQuery>
              </>
             )

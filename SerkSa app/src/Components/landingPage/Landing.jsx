@@ -9,7 +9,7 @@ function LandingPage(){
             opacity: 0.5
         },
         visable:{
-            marginLeft:"0", 
+            marginLeft:0,
             transition:{
                 delay: 1,
                 duration: 0.5

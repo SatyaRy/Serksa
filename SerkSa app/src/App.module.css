@@ -45,15 +45,20 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-bottom: 20vh;
-    border: solid red;
+    overflow-x: hidden;
+
 }
+.featurePage{
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    grid-area: feature;
+    align-items: center;
+    background-attachment: fixed;
+    height:160vh;
+    overflow-x: hidden;
 
-
-
-
-
-
+}
 
 /*media query*/
 @media (max-width: 768px) {
@@ -61,5 +66,4 @@
         grid-template-rows: auto auto 400px;
     }
 }
-
 

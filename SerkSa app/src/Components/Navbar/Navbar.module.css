@@ -129,6 +129,7 @@
     padding-left: 5vw;
     padding-top: 5vh;
     color: white;
+    z-index: 1;
   }
   .hideMenu{
     display: none;
@@ -138,7 +139,7 @@
     height: 60%;
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 25px;
   }
   .sectionIcon{
     font-size: 2rem;
@@ -148,12 +149,12 @@
     height: auto;
     display: flex;
     flex-direction: column;
-    gap: 48px;
+    gap: 35px;
     padding-left: 3vw;
     font-size: 1.25rem;
   }
   .contactButton{
-    top:90vh;
+    top:65vh;
     position: absolute;
     width: 90%;
     height: 10%;

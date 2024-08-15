@@ -18,6 +18,7 @@ function Navbar(){
     };
     const linkList = ["Home", "Our services" , "About us", "Our work"]
     const link = ["/", "signup","/","ss"]
+    click?document.body.style.overflow="hidden":document.body.style.overflow ="auto";
     return (
             <>
                 <MediaQuery maxWidth={1023}>

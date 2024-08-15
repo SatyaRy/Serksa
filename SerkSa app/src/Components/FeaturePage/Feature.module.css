@@ -1,0 +1,104 @@
+.mainBox{
+    width: 90%;
+    padding-top: 3vh;
+    display: flex;
+    height: auto;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    padding-bottom: 2vh;
+}
+.mainBox h4{
+    font-size: 24px;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.content button{
+    margin-top: 2vh;
+    text-align: start;
+    border: none;
+    height: 56px;
+    padding: 10px;
+    font-size: 1.5rem;
+    color: white;
+    background: linear-gradient(to right, #D610E8, #00ACFF);
+}
+.content p{
+    font-size: 17px;
+    color: white;
+    padding-left: 2vh;
+    padding-right: 2vh;
+    padding-bottom: 5vh;
+    display: none;
+    padding-top: 2vh;
+    z-index: -1;
+    word-spacing: 2px;
+    font-weight: 300;
+    background: linear-gradient(to right, #D610E8, #00ACFF);
+}
+.icon{
+    margin-left: 10vh;
+    color: white;
+}
+.clickButton{
+    display: flex;
+    justify-content: space-between;
+}
+.clickButton h4{
+    font-weight: 500 ;
+}
+
+/*for desktop and tablet*/
+.mainBoxI{
+   display: flex;
+   justify-content: center;
+   width: 100%;
+   flex-wrap: wrap;
+   gap:30px;
+}
+.boxI{
+    width: 27.5%;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: start;
+    
+}
+.boxI img{
+    width: 100%;
+}
+.boy{
+    width: 100%;
+    height: 250px;
+    justify-content: center;
+    border: none;
+    border-radius: 15px;
+    display: flex;
+    background:linear-gradient(to right, #F5EBFD,#E7F5FF)
+}
+.container{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 5vh;
+}  
+.top{
+    color: #2E0148;
+    font-size: 2rem;
+    padding-bottom: 3vh;
+}
+.boxI >h4{
+    padding-top: 2.5vh;
+    font-size: 20px;
+}
+.boxI >p{
+    width: 100%;
+    height: 20%;
+    overflow: hidden;
+}

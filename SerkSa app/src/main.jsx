@@ -4,6 +4,7 @@ import App from './App.jsx'
 import Signup from './pages/SignUp.jsx'
 import {RouterProvider, createBrowserRouter} from "react-router-dom"
 import Overview from "./Components/FeaturePage/Feature.jsx"
+import About from "./Components/About/About.jsx"
 const router = createBrowserRouter([
   {
     path:"/signup",
@@ -12,7 +13,13 @@ const router = createBrowserRouter([
   {
     path:"/",
     element: <App/>,
-    errorElement: <Signup/>
+    errorElement: <Signup/>,
+    children:[
+        {
+          path: "/what-is-SerkSa?",
+          element: <About/>
+        }
+    ]
   },
   {
     path: "/overview",

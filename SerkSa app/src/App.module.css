@@ -7,7 +7,7 @@
         "main main main"
         "footer footer footer";
     grid-template-columns: repeat(auto-fit, minmax(400px,1fr));
-    grid-template-rows: 80px auto 100px ;
+    grid-template-rows: auto auto auto auto ;
     height: 100vh;
 }
 .main{
@@ -17,9 +17,10 @@
         "landing landing landing"
         "about about about"
         "feature feature feature"
+        "key key key"
     ;
     grid-template-columns: repeat(auto-fit,minmax(400px, 1fr));
-    grid-template-rows: auto auto auto;
+    grid-template-rows: auto auto auto auto;
 }
 .landing{
     display: flex;
@@ -45,7 +46,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow-x: hidden;
+    height: auto;
+    overflow: hidden;
 
 }
 .featurePage{
@@ -54,16 +56,16 @@
     justify-content: top;
     grid-area: feature;
     align-items: center;
-    background-attachment: fixed;
-    height:160vh;
-    overflow-x: hidden;
+    height:auto;
 
 }
-
+.keyPage{
+    display: flex;
+    justify-content: top;
+    align-items: start;
+    flex-direction: column;
+    height: auto;
+    grid-area: key;
+    margin-bottom: 10vh;
+}
 /*media query*/
-@media (max-width: 768px) {
-    .main{
-        grid-template-rows: auto auto 400px;
-    }
-}
-

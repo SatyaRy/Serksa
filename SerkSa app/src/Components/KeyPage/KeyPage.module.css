@@ -1,0 +1,148 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: start;
+    width: 100%;
+    padding-left: 6vw;
+    padding-right: 6vw;
+}
+.container h4{
+    margin-top: 2vh;
+    font-size: 1.5rem;
+    padding-bottom: 2vh;
+}
+.boxI{
+    width: 100%;
+    height: 70vh;
+    border: none;
+    display: flex;
+    justify-content: center;
+    border-radius: 30px;
+    align-items: center;
+    background:linear-gradient(60deg, #829FFF,#D2B7FF,#ABFBFF,#FFC1D6)
+}
+/* leader box*/
+.LeaderBox{
+    display: flex;
+    width: 100%;
+    height: auto;
+    margin-top: 10vh;
+    justify-content: top;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 10vh;
+}
+.LeaderBox img{
+    width: 170px;
+}
+.LeaderBox button{
+    width: 200px;
+    height: 40px;
+    margin-bottom: 2vh;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    background: linear-gradient(to right, #D610E8, #00ACFF);
+    box-shadow: 10px 10px 0px rgb(181, 180, 180);
+}
+.boxI div:nth-child(2){
+    margin-top:10vh;
+}
+.boxI div:nth-child(1){
+    margin-top:20vh;
+}
+.boxI div:nth-child(3){
+    margin-top:20vh;
+}
+@media (min-width: 1024px)  {
+    .LeaderBox img{
+        width: 50%;
+    }
+    .container h4{
+        font-size: 2rem;
+    }
+}
+@media (max-width: 1024px)  {
+    .LeaderBox button{
+        width: 150px;
+        font-size: 1rem;
+        box-shadow: 5px 5px 0px rgb(181, 180, 180);
+    }
+
+    
+}
+
+/* section II*/
+.containerII{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    padding-bottom: 4vh;
+    padding-top: 10vh;
+}
+.containerII h4{
+    margin-top: 3vh;
+    font-size: 2.5rem;
+    color:#2E0148;
+    text-align: center;
+}
+.gamifyFeature{
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+#gamify{
+    width: 50%;
+    height: auto;
+}
+.gamifyBox{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    padding-left: 5vw;
+    gap: 20px;
+}
+/*gamifyBox section*/
+.smallBoxI{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.roadmapTips{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    gap: 20px;
+}
+.roadmapFeature{
+    display: flex;
+    width: 100%;
+}
+#roadmap{
+    width: 50%;
+    height: auto;
+}
+#smallBoxII{
+    display: flex;
+    flex-direction: column;
+}
+.icon{
+    display: flex;
+    flex-direction: column;
+}
+.detail{
+    display: flex;
+    flex-direction: column;
+}

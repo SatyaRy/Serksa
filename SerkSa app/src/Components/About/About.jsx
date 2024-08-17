@@ -6,7 +6,6 @@ import {motion, useInView} from "framer-motion"
 import Wave from "react-wavify"
 import MediaQuery from 'react-responsive'
 import bothPhone from "../../assets/icon/bothphone.svg"
-import {Link} from "react-router-dom"
 export default function AboutPage(){
     const Logo = logo
     const phone = bothPhone

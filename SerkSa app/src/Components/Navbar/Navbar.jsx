@@ -9,7 +9,7 @@ import { FaHome,FaHandHoldingUsd,FaQuestionCircle ,FaProjectDiagram} from "react
 import { IoMenu } from "react-icons/io5";
 import MediaQuery from 'react-responsive';
 import Signup from "../../pages/SignUp"
-import { Link } from 'react-router-dom';
+import { Link, NavLink,Outlet } from 'react-router-dom';
 import {motion} from "framer-motion"
 function Navbar(){
     const [click, setClick] = useState(false)
@@ -67,7 +67,7 @@ function Navbar(){
                                     <motion.a className={styles.NavbarI}href="" transition={{delay:0.5}} animate={{marginTop:0}}>Our services</motion.a>
                                     <motion.a className={styles.NavbarI}href="" transition={{delay:0.5}} animate={{marginTop:0}}>About us</motion.a>
                                     <motion.a className={styles.NavbarI}href="" transition={{delay:0.5}} animate={{marginTop:0}}>Our work</motion.a>        
-                                    <Link  to="/signup"><motion.h4 transition={{delay:0.5}}  animate={{marginTop:0}} className = {styles.sign}>Sign Up</motion.h4></Link>
+                                    <motion.a transition={{delay:0.5}}  animate={{marginTop:0}} className = {styles.sign}>Sign Up</motion.a>
                                     <div className={styles.mainButton}>
                                         <button className ={styles.contactButton}>Contact Us</button>
                                     </div>

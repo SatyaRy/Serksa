@@ -4,7 +4,9 @@ import styles from "./App.module.css"
 import LandingPage from "./Components/LandingPage/Landing.jsx"
 import AboutPage from "./Components/About/About.jsx"
 import FeaturePage from "./Components/FeaturePage/Feature.jsx"
+import ShowFeature from "./Components/Show/showFeature.jsx"
 import KeyPage from "./Components/KeyPage/KeyPage.jsx"
+import Footer from "./Components/footer/Footer.jsx"
 import './App.css'
 function App() {
   return(
@@ -15,7 +17,14 @@ function App() {
                                 <div className ={styles.aboutPage}><AboutPage/></div>
                                 <div className ={styles.featurePage}><FeaturePage/></div>
                                 <div className ={styles.keyPage}><KeyPage/></div>
+                                <div className ={styles.showFeature}><ShowFeature/></div>
                         </main>
+                        <div className ={styles.footer}>
+                            <Footer/>
+                        </div>
+                        <div className ={styles.copyright}>
+                              <h4 style={{color:"white" ,textAlign:"center" ,fontWeight:"300",fontSize:"0.9rem"}}>&#xa9; Alright Reserved 2024, SERKSA</h4>
+                        </div>
                   </div>
   )
 }

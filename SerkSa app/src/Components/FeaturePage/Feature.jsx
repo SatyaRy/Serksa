@@ -31,7 +31,12 @@ function FeaturePage (){
                <div className ={style.container}>
                 <h4 className ={style.top}>Project Overview</h4>
                     <div className ={style.mainBoxI}>
-                            <div className={style.boxI} >
+                            <motion.div className={style.boxI} 
+                            initial={{y: 100}}
+                            whileInView={{y:0}}
+                            transition={{duration:0.5}}
+                            viewport={{once: true}}
+                            >
                                 <motion.div className ={style.boy}
                                  variants={animation}
                                  initial="hidden"
@@ -41,13 +46,23 @@ function FeaturePage (){
                                 </motion.div>
                                 <h4>Problem Statement</h4>
                                 <p>{paragraph.problem}</p>
-                                <button>
-                                    <div className ={style.button}>
-                                        <h4>Read More</h4> <MdNavigateNext id={style.icon}/>
-                                    </div>
-                                </button>
-                            </div>
-                            <div className={style.boxI}>
+                                <motion.button
+                                whileHover={{scale:"1.05"}}
+                                >
+                                    <motion.div className ={style.button}
+                                    whileHover={{x:2}}
+                                    >
+                                        <h4
+                                        >Read More</h4> <MdNavigateNext id={style.icon}/>
+                                    </motion.div>
+                                </motion.button>
+                            </motion.div>
+                            <motion.div className={style.boxI}
+                                initial={{y: 100}}
+                                whileInView={{y:0}}
+                                transition={{duration:0.5}}
+                                viewport={{once: true}}
+                            >
                                 <motion.div className ={style.boy}
                                   variants={animation}
                                   initial="hidden"
@@ -56,15 +71,25 @@ function FeaturePage (){
                                     <img src={idea} alt="" />
                                 </motion.div>
                                 <h4>Solution</h4>
-                                <p>{paragraph.solution}</p>
-                                <button>
-                                    <div className ={style.button}>
-                                        <h4>Read More</h4>
-                                        <MdNavigateNext id={style.icon}/>
-                                    </div>
-                                </button>
-                            </div>
-                            <div className={style.boxI}>
+                                <p
+                                >{paragraph.solution}</p>
+                                 <motion.button
+                                whileHover={{scale:"1.05"}}
+                                >
+                                    <motion.div className ={style.button}
+                                    whileHover={{x:2}}
+                                    >
+                                        <h4
+                                        >Read More</h4> <MdNavigateNext id={style.icon}/>
+                                    </motion.div>
+                                </motion.button>
+                            </motion.div>
+                            <motion.div className={style.boxI}
+                                  initial={{y: 100}}
+                                  whileInView={{y:0}}
+                                  transition={{duration:0.5}}
+                                  viewport={{once: true}}
+                            >
                                 <motion.div className ={style.boy}
                                   variants={animation}
                                   initial="hidden"
@@ -74,13 +99,17 @@ function FeaturePage (){
                                 </motion.div>
                                 <h4>Deliverable</h4>
                                 <p>{paragraph.Deliverable}</p>
-                                <button>
-                                    <div className ={style.button}>
-                                            <h4>Read More</h4>
-                                            <MdNavigateNext id={style.icon}/>
-                                        </div>
-                                </button>
-                            </div>
+                                <motion.button
+                                whileHover={{scale:"1.05"}}
+                                >
+                                    <motion.div className ={style.button}
+                                    whileHover={{x:2}}
+                                    >
+                                        <h4
+                                        >Read More</h4> <MdNavigateNext id={style.icon}/>
+                                    </motion.div>
+                                </motion.button>
+                            </motion.div>
                     </div>
                </div>
 

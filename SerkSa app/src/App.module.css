@@ -5,10 +5,12 @@
     grid-template-areas: 
         "header header header"
         "main main main"
-        "footer footer footer";
+        "footer footer footer"
+        "right right right"
+        ;
     grid-template-columns: repeat(auto-fit, minmax(400px,1fr));
     grid-template-rows: auto auto auto auto ;
-    height: 100vh;
+    overflow: hidden;
 }
 .main{
     display: grid;
@@ -18,9 +20,10 @@
         "about about about"
         "feature feature feature"
         "key key key"
+        "showKey showKey showKey"
     ;
     grid-template-columns: repeat(auto-fit,minmax(400px, 1fr));
-    grid-template-rows: auto auto auto auto;
+    grid-template-rows: auto auto auto auto auto;
 }
 .landing{
     display: flex;
@@ -66,6 +69,35 @@
     flex-direction: column;
     height: auto;
     grid-area: key;
-    margin-bottom: 10vh;
+    margin-bottom: 2vh;
+}
+.showFeature{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: showKey;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+    height: 70vh;
+    padding-bottom: 2vh;
+    padding-left: 5vh;
+    padding-right: 5vh;
+    background: linear-gradient(to right,#829FFF,#D2B7FF,#ABFBFF,#FFC1D6);
+}
+.footer{
+    display: flex;
+    justify-content: space-evenly;
+    height: auto;
+    grid-area: footer;
+    flex-direction: column;
+    padding-bottom: 5vh;
+    background: linear-gradient(110deg, #160022 52%, #560088 100%);
+}
+.copyright{
+    grid-area: right;
+    justify-content: center;
+    align-items: center;
+    height: 5vh;
+    background: linear-gradient(110deg, #160022 52%, #560088 100%);
 }
 /*media query*/

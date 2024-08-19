@@ -49,7 +49,8 @@ function LandingPage(){
                         <h4 className={style.application}>SerkSa Application</h4>
                         <h4 className={style.description}>We created a gamified app to enhance high school learning experiences.</h4>
                         <div className ={style.button}>
-                            <button className={style.work}>How our app works</button>
+                            <button
+                            className={style.work}>How our app works</button>
                             <button className={style.learn}>Learn more</button>
                         </div>
                         <div className ={style.animateRobotI}>

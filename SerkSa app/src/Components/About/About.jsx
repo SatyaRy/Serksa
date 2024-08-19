@@ -22,10 +22,20 @@ export default function AboutPage(){
               <MediaQuery minWidth={768}>
                    <div className ={style.large}>
                         <div className={style.about}>
-                            <img className ={style.phoneI}src={phone} alt="" />
+                            <motion.img 
+                            initial={{x:-100}}
+                            whileInView={{x:0}}
+                            transition={{duration: 0.5}}
+                            viewport={{once: true}}
+                            className ={style.phoneI}src={phone} alt="" />
                             <div className ={style.detailSection}>
                                     <Question/>
-                                    <Paragraph/>
+                                    <motion.p 
+                                    initial={{y:300}}
+                                    whileInView={{y:0}}
+                                    transition={{duration: 0.5}}
+                                    viewport={{once: true}}
+                                    className ={style.paragraph}>SerkSa is a gamified app that transforms self-learning for high school students with structured lessons, foundational skill-building, and interactive games that keep them motivated.</motion.p>
                                     <Button/>
                             </div>
                         </div>
@@ -42,7 +52,7 @@ function Iphone(){
     const phone = bothPhone
     const animation={
         hidden:{
-           y: "50vh"
+           y: 100
         },
         visible:{
             y: 0,
@@ -53,48 +63,35 @@ function Iphone(){
     }
     return(
         <motion.div 
-             variants={animation}
-             initial="hidden"
-             whileInView="visible"
-             viewport={{once: true}}
+            variants={animation}
+            initial ="hidden"
+            whileInView="visible"
+            viewport={{once: true}}
             className ={style.iphone}>
-                   <img src={phone} alt="" />
+            <img src={phone} alt="" />
         </motion.div>
     )
 }
 function Paragraph(){
     const animation={
         hidden:{
-           y: "500px"
+           x: -100
         },
         visible:{
-            y: 0,
+            x: 0,
             transition:{
                 duration: 0.5
             },
         }
     }
-    const desktopAnimate={
-        hidden:{
-            y:0
-        },
-        visible:{
-            y: 0,
-            transition:{
-                duration: 0.5
-            }
-        }
-    }
     return(
-            <>
+            
                 <motion.p 
-                    variants={animation}
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{once: true}}
-                    className ={style.paragraph}>SerkSa is a gamified app that transforms self-learning for high school students with structured lessons, foundational skill-building, and interactive games that keep them motivated.
-                </motion.p>
-            </>
+                variants={animation}
+                initial="hidden"
+                viewport={{once: true}}
+                whileInView="visible"
+                className ={style.paragraph}>SerkSa is a gamified app that transforms self-learning for high school students with structured lessons, foundational skill-building, and interactive games that keep them motivated.</motion.p>
     )
 }
 function Wavy(){
@@ -123,7 +120,7 @@ function Question(){
     return(
             <div className = {style.section}>
                 <img src={Logo} alt="" />
-                <h1>What is SERKSA?</h1>
+                <h1 id ={style.headText}>What is SERKSA?</h1>
             </div>
     )
 }

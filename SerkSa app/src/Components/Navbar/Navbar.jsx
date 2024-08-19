@@ -57,7 +57,7 @@ function Navbar(){
                             <div className={styles.Navbar}>
                                 <motion.div class={styles.SerksaLogo}   transition={{delay:0.5}} animate ={{marginTop: 0}}>
                                     <img src={Serksa} style ={{width:"60px" ,height:"58px"}}alt="" />
-                                    <h4 className ={styles.SerkSaText}>SERKSA</h4>
+                                    <h4 onclick={()=>console.log("hello")}className ={styles.SerkSaText}>SERKSA</h4>
                                 </motion.div>
                                 <div initial={{marginTop: -100}}animate={{marginTop: 0}} className={styles.Navlist} >
                                     <motion.a className={styles.NavbarI}href="" 

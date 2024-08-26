@@ -68,7 +68,7 @@ function FeaturePage (){
                                   initial="hidden"
                                   whileHover="visible"
                                 >
-                                    <img src={idea} alt="" />
+                                <img src={idea} alt="" />
                                 </motion.div>
                                 <h4>Solution</h4>
                                 <p

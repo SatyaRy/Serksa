@@ -27,7 +27,7 @@ function LandingPage(){
     return(
            <>
                  <MediaQuery maxWidth={600}>
-                    <div class ={style.Mainlanding}>
+                    <div className ={style.Mainlanding}>
                         <h4 className={style.application}>SerkSa Application</h4>
                         <h4 className={style.description}>We created a gamified app to enhance high school learning experiences.</h4>
                         <div className ={style.animateRobot}>
@@ -41,7 +41,7 @@ function LandingPage(){
                     </div>
                  </MediaQuery>
                  <MediaQuery minWidth={600}>
-                    <motion.div class ={style.Mainlanding}
+                    <motion.div className ={style.Mainlanding}
                         variants = {animation}
                         initial ="hidden"
                         animate ="visable"

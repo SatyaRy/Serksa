@@ -8,7 +8,12 @@ import ig from "../../assets/model/ig.svg"
 import tg from "../../assets/model/telegram.svg"
 import yt from "../../assets/model/youtube.svg"
 import Serksa from '../../assets/icon/logo1.svg'
+import { Link } from "react-router-dom"
+import Email from "../../assets/icon/email.svg"
 export default function Footer(){
+    const facebookLink = "https://www.facebook.com/profile.php?id=61557592977225&mibextid=JRoKGi"
+    const telegramLink = "https://t.me/serksa_admin"
+    const emailLink = "https://mail.google.com/mail/u/0/#inbox"
     return(
         <>
             <div className ={style.container}>
@@ -22,10 +27,9 @@ export default function Footer(){
                             <div className ={style.contact}>
                                 <button style={{width:"150px", backgroundColor:"#0081FE",border:"solid white",borderRadius:"15px",color:"white",fontSize:"1rem"}}>Contact Us</button>
                                 <div className ={style.contactMethods}>
-                                        <img src={facebook} style={{width:"30px"}} alt="" />
-                                        <img src={ig} style={{width:"30px"}}alt="" />
-                                        <img src={tg} style={{width:"30px"}}alt="" />
-                                        <img src={yt} style={{width:"30px"}}alt="" />
+                                        <Link to ={facebookLink}><img src={facebook} style={{width:"30px"}} alt="" /></Link>
+                                        <Link to ={telegramLink}><img src={tg} style={{width:"30px"}}alt=""/></Link>
+                                        <Link to ={emailLink}><img src={Email} style={{width:"30px"}}alt="" /></Link>
                                 </div>
                             </div>
                       </div>

@@ -22,7 +22,7 @@ export default function KeyPage(){
             <>
                 <div className ={style.container}>
                     <h4>App Features</h4>
-                    <img style={{width: "100%",paddingTop:"2vh"}}src={allFeature} alt="" />
+                    <img loading="lazy" style={{width: "100%",paddingTop:"2vh"}}src={allFeature} alt="" />
                 </div>
                 <div className ={style.containerII}>
                     <h4 className={style.HeaderText}>Let’s see what special about our app features!</h4>
@@ -122,7 +122,7 @@ function Detail({Icon,Methods,Description}){
     return(
          
         <div className ={style.smallBoxI}>
-            <motion.img 
+            <motion.img loading="lazy"
             initial={{y:100}}
             whileInView={{y:0}}
             transition={{duration:0.5}}
@@ -143,7 +143,7 @@ function Detail({Icon,Methods,Description}){
 }
 function FeatureMock({FeatureMockup}){
     return(
-           <img 
+           <img loading="lazy"
                 src={FeatureMockup} 
                 alt="" id={style.gamify}
            /> 

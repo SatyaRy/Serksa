@@ -40,13 +40,10 @@ function Navbar(){
 
                        </div>
                        <div className={styles.menuDetail}>
-                            {
-                                linkList.map((value)=>{
-                                    return(
-                                        <Link to="/">{value}</Link>
-                                    )
-                                })
-                            }
+                          <Link>Home</Link>
+                          <Link>Services</Link>
+                          <Link>Our Work</Link>
+                          <Link>Sign up</Link>
                        </div>
                         <div className ={styles.contactButton}>
                               <button id ={styles.contact}><Link to="/signup">Contact Us</Link></button>
@@ -57,7 +54,7 @@ function Navbar(){
                             <div className={styles.Navbar}>
                                 <motion.div class={styles.SerksaLogo}   transition={{delay:0.5}} animate ={{marginTop: 0}}>
                                     <img src={Serksa} style ={{width:"60px" ,height:"58px"}}alt="" />
-                                    <h4 onclick={()=>console.log("hello")}className ={styles.SerkSaText}>SERKSA</h4>
+                                    <h4 className ={styles.SerkSaText}>SERKSA</h4>
                                 </motion.div>
                                 <div initial={{marginTop: -100}}animate={{marginTop: 0}} className={styles.Navlist} >
                                     <motion.a className={styles.NavbarI}href="" 

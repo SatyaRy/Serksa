@@ -1,7 +1,5 @@
 import style from "../../Components/About/About.module.css"
 import logo from "../../assets/icon/white.svg"
-import iphone from "../../assets/icon/iphone.svg"
-import iphone2 from "../../assets/icon/iphone1.svg"
 import {motion, useInView} from "framer-motion"
 import Wave from "react-wavify"
 import MediaQuery from 'react-responsive'
@@ -119,7 +117,7 @@ function Question(){
     const Logo = logo
     return(
             <div className = {style.section}>
-                <img src={Logo} alt="" />
+                <img src={Logo} alt="" loading="lazy" />
                 <h1 id ={style.headText}>What is SERKSA?</h1>
             </div>
     )

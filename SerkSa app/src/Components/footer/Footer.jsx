@@ -13,7 +13,8 @@ import Email from "../../assets/icon/email.svg"
 export default function Footer(){
     const facebookLink = "https://www.facebook.com/profile.php?id=61557592977225&mibextid=JRoKGi"
     const telegramLink = "https://t.me/serksa_admin"
-    const emailLink = "https://mail.google.com/mail/u/0/#inbox"
+    const emailLink = "https://mail.google.com/mail/u/0/#inbox?compose=CllgCJTNqbzMMZrFVXDdRbpvwpgCxmJJnJqVhbfbVXZGKJHFBfcJhhKnfDgMBFXwplqbLXgRQzL"
+    const youtubeLink ="https://www.youtube.com/@MetaSeng55"
     return(
         <>
             <div className ={style.container}>
@@ -30,6 +31,7 @@ export default function Footer(){
                                         <Link to ={facebookLink}><img src={facebook} style={{width:"30px"}} alt="" /></Link>
                                         <Link to ={telegramLink}><img src={tg} style={{width:"30px"}}alt=""/></Link>
                                         <Link to ={emailLink}><img src={Email} style={{width:"30px"}}alt="" /></Link>
+                                        <Link to ={youtubeLink}><img src={yt} style={{width:"40px"}}alt="" /></Link>
                                 </div>
                             </div>
                       </div>

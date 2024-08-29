@@ -35,7 +35,6 @@
   }
   .sign{
     font-weight: normal;
-    margin-top: -100vh;
     width: 120px;
     height: 50px;
     display: flex;
@@ -44,22 +43,9 @@
     justify-content: center;
     background-color: black;
   }
-  .NavbarI{
-    padding-top: 15px;
-    margin-top: -100vh;
-  }
   a{
     text-decoration: none;
     color: white;
-  }
-  .NavbarI::before{
-    content:"";
-    position: absolute;
-    width: 0vw;
-    height: 1px;
-    top: 7vh;
-    background-color: white;
-    transition: all linear 0.5s;
   }
   .menu{
     color: white;
@@ -72,7 +58,6 @@
     width: 20%;
     align-items: center;
     justify-content: start;
-    margin-top: -100vh;
   }
   .SerkSaText{
     font-size: 1.2rem;
@@ -113,11 +98,11 @@
     background-attachment: fixed;
     object-fit: cover;
     display: flex;
+    z-index: 99999999;
     justify-content: start;
     padding-left: 5vw;
     padding-top: 5vh;
     color: white;
-    z-index: 1;
   }
   .hideMenu{
     display: none;
@@ -158,6 +143,12 @@
     font-size: 1.5rem;
     width: 80%;
     height: 80%;
+  }
+  .navTest{
+    justify-content: end;
+    gap: 70px;
+    width: 100%;
+    display: flex;
   }
 
  

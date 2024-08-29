@@ -4,6 +4,7 @@ import {motion, useInView} from "framer-motion"
 import Wave from "react-wavify"
 import MediaQuery from 'react-responsive'
 import bothPhone from "../../assets/icon/bothphone.svg"
+import LazyLoad from "react-lazy-load"
 export default function AboutPage(){
     const Logo = logo
     const phone = bothPhone
@@ -20,12 +21,15 @@ export default function AboutPage(){
               <MediaQuery minWidth={768}>
                    <div className ={style.large}>
                         <div className={style.about}>
+                          <LazyLoad onContentVisible={()=>{console.log("yes")}}>
                             <motion.img 
-                            initial={{x:-100}}
-                            whileInView={{x:0}}
-                            transition={{duration: 0.5}}
-                            viewport={{once: true}}
-                            className ={style.phoneI}src={phone} alt="" />
+                                loading="lazy"
+                                initial={{x:-100}}
+                                whileInView={{x:0}}
+                                transition={{duration: 0.5}}
+                                viewport={{once: true}}
+                                className ={style.phoneI}src={phone} alt="" />
+                          </LazyLoad>
                             <div className ={style.detailSection}>
                                     <Question/>
                                     <motion.p 

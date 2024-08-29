@@ -1,12 +1,11 @@
 import style from "../../Components/KeyPage/KeyPage.module.css"
+import { lazy,Suspense} from "react"
 import MediaQuery from "react-responsive"
 import leader from "../../assets/icon/leader.svg"
 import road from "../../assets/icon/road.svg"
 import score from "../../assets/icon/score.svg"
 import firstFeature from "../../assets/icon/firstFeature.svg"
 import secondFeature from "../../assets/icon/secondFeature.svg"
-import lamp from "../../assets/icon/lamp.svg"
-import hand from "../../assets/icon/hand.svg"
 import mind from "../../assets/icon/mind.svg"
 import acess from "../../assets/icon/acess.svg"
 import internet from "../../assets/icon/internet.svg"
@@ -16,7 +15,8 @@ import note from "../../assets/icon/note.svg"
 import reward from "../../assets/icon/Reward.svg"
 import {motion} from "framer-motion"
 import allFeature from "../../assets/icon/allFeature.svg"
-
+import lamp from "../../assets/icon/lamp.svg"
+import hand from "../../assets/icon/hand.svg"
 export default function KeyPage(){
     return(
             <>
@@ -123,11 +123,11 @@ function Detail({Icon,Methods,Description}){
          
         <div className ={style.smallBoxI}>
             <motion.img loading="lazy"
-            initial={{y:100}}
-            whileInView={{y:0}}
-            transition={{duration:0.5}}
-            viewport={{once: true}}
-            src={Icon} alt="" style={{width:"20%"}}/>
+                initial={{y:100}}
+                whileInView={{y:0}}
+                transition={{duration:0.5}}
+                viewport={{once: true}}
+                src={Icon} alt="" style={{width:"20%"}}/>
             <motion.div className={style.detail}
             initial={{x:100}}
             whileInView={{x:0}}

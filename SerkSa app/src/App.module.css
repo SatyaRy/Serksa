@@ -34,8 +34,8 @@
     background-attachment: fixed;
     grid-area: landing;
     padding-bottom: 5vh;
+
     overflow: hidden;
-    z-index: -1;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     box-shadow: 2px 2px 0px grey;

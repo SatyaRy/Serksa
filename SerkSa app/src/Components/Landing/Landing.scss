@@ -37,6 +37,7 @@
     display: flex;
     height: auto;
     margin-top: 5vh;
+    z-index: 99999;
     gap: 20px;
     width: 100%;
     padding-right: 5vw;
@@ -58,17 +59,13 @@
     height:70px ;
     border: none;
     font-size: 20px;
+    z-index: 2;
     border-radius: 8px;
-}
-.animateRobot{
-    width: 100%;
-    height: 30vh;
-    overflow: hidden;
 }
 
 .animateRobotI{
     width: 100%;
-    height: 100%;
+    height: auto;
     overflow: hidden;
     justify-content: center;
     object-fit: cover;
@@ -82,8 +79,11 @@
     padding-right: 10vw;
 }
 
-
-
+.buttonText{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
 
 
 
@@ -148,6 +148,7 @@
      align-items: start;
     }
     .button{
+        display: flex;
         flex-direction: column;
         padding-left: 5vw;
         width: 100%;
@@ -175,6 +176,17 @@
     }
     .application{
         padding-left: 5vw;
+    }
+    .buttonText{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .animateRobot{
+        width: 100%;
+        height: 30vh;
+        overflow: hidden;
+        justify-content: none;
+        object-fit: none;
     }
   }
   @media (max-width: 430px) {

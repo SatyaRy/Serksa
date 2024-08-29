@@ -5,6 +5,7 @@ import Wave from "react-wavify"
 import MediaQuery from 'react-responsive'
 import bothPhone from "../../assets/icon/bothphone.svg"
 import LazyLoad from "react-lazy-load"
+import CloudImage from "../../model/Image.jsx"
 export default function AboutPage(){
     const Logo = logo
     const phone = bothPhone
@@ -28,8 +29,9 @@ export default function AboutPage(){
                                 whileInView={{x:0}}
                                 transition={{duration: 0.5}}
                                 viewport={{once: true}}
-                                className ={style.phoneI}src={phone} alt="" />
+                                className ={style.phoneI} src={phone} alt="" />
                           </LazyLoad>
+                        
                             <div className ={style.detailSection}>
                                     <Question/>
                                     <motion.p 
@@ -70,7 +72,7 @@ function Iphone(){
             whileInView="visible"
             viewport={{once: true}}
             className ={style.iphone}>
-            <img src={phone} alt="" />
+            <CloudImage imageName={"SerkSa/Iphone"}/>
         </motion.div>
     )
 }

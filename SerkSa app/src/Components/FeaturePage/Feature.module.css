@@ -1,85 +1,88 @@
 /*for desktop and tablet*/
 .mainBoxI{
-   display: flex;
-   justify-content: center;
-   width: 100%;
-   flex-wrap: wrap;
-   gap:30px;
-}
-.boxI{
-    width: 27.5%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: top;
-    align-items: start;
-    
-}
-.boxI img{
-    width: 100%;
-}
-.boy{
-    width: 100%;
-    height: 250px;
-    justify-content: center;
-    border: none;
-    border-radius: 15px;
-    display: flex;
-    background:linear-gradient(to right, #F5EBFD,#E7F5FF)
-}
-.container{
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding-top: 5vh;
-    height: auto;
-}  
-.top{
-    color: #2E0148;
-    font-size: 2rem;
-    padding-bottom: 3vh;
-}
-.boxI >h4{
-    padding-top: 2.5vh;
-    font-size: 20px;
-}
-.boxI >p{
-    padding-top: 1.5vh;
-    width: 100%;
-    height: auto;
-    padding-bottom: 1vh;
-
-}
-.boxI button{
-    width: 100px;
-    height: 30px;
-    font-size: 0.8rem;
-    border: none;
-    color: white;
-    border-radius: 7px;
-    background: linear-gradient(to right, #FF52AF,#9F53FF);
-}
-.headDetail{
-    padding-top: 2vh;
-    display: flex;
-    gap: 10px;
-}
-.button{
     display: flex;
     justify-content: center;
-}
-#icon{
-    font-size: 1rem;
-}
-@media (max-width:767px) {
-    .boxI{
-        width: 90%;
-        height: auto;
-        display: flex;
-        justify-content: top;
-        align-items: start;
-        
-    }
-}
+    width: 100%;
+    flex-wrap: wrap;
+    gap:30px;
+ }
+ .boxI{
+     width: 27.5%;
+     height: auto;
+     display: flex;
+     flex-direction: column;
+     justify-content: top;
+     align-items: start;
+     
+ }
+ .boxI img{
+     width: 100%;
+ }
+ .featureImage{
+     width: 100%;
+ }
+ .boy{
+     width: 100%;
+     height: 250px;
+     justify-content: center;
+     border: none;
+     border-radius: 15px;
+     display: flex;
+     background:linear-gradient(to right, #F5EBFD,#E7F5FF)
+ }
+ .container{
+     display: flex;
+     width: 100%;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+     padding-top: 5vh;
+     height: auto;
+ }  
+ .top{
+     color: #2E0148;
+     font-size: 2rem;
+     padding-bottom: 3vh;
+ }
+ .boxI >h4{
+     padding-top: 2.5vh;
+     font-size: 20px;
+ }
+ .boxI >p{
+     padding-top: 1.5vh;
+     width: 100%;
+     height: auto;
+     padding-bottom: 1vh;
+ 
+ }
+ .boxI button{
+     width: 100px;
+     height: 30px;
+     font-size: 0.8rem;
+     border: none;
+     color: white;
+     border-radius: 7px;
+     background: linear-gradient(to right, #FF52AF,#9F53FF);
+ }
+ .headDetail{
+     padding-top: 2vh;
+     display: flex;
+     gap: 10px;
+ }
+ .button{
+     display: flex;
+     justify-content: center;
+ }
+ #icon{
+     font-size: 1rem;
+ }
+ @media (max-width:767px) {
+     .boxI{
+         width: 90%;
+         height: auto;
+         display: flex;
+         justify-content: top;
+         align-items: start;
+         
+     }
+ }

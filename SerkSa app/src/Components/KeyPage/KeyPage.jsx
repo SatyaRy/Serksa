@@ -17,17 +17,18 @@ import {motion} from "framer-motion"
 import allFeature from "../../assets/icon/allFeature.svg"
 import lamp from "../../assets/icon/lamp.svg"
 import hand from "../../assets/icon/hand.svg"
+import CloudImage from "../../model/Image.jsx"
 export default function KeyPage(){
     return(
             <>
                 <div className ={style.container}>
                     <h4>App Features</h4>
-                    <img loading="lazy" style={{width: "100%",paddingTop:"2vh"}}src={allFeature} alt="" />
+                    <CloudImage modelStyle ={{width: "100%",paddingTop:"2vh"}} imageName={"SerkSa/roadmap"}/>
                 </div>
                 <div className ={style.containerII}>
                     <h4 className={style.HeaderText}>Let’s see what special about our app features!</h4>
                     <div className ={style.gamifyFeature}>
-                        <FeatureMock FeatureMockup={firstFeature}/>
+                        <FeatureMock FeatureMockup="SerkSa/gamify"/>
                         <div className ={style.gamifyBox}>
                              <h4 style ={{fontSize: "2rem"}}>Gamify Learning</h4>
                              <Detail
@@ -49,7 +50,7 @@ export default function KeyPage(){
                     </div>
                     <MediaQuery maxWidth={768}>
                         <div className ={style.gamifyFeature}>
-                            <FeatureMock FeatureMockup={secondFeature}/>
+                            <FeatureMock FeatureMockup="SerkSa/roadtip"/>
                             <div className ={style.gamifyBox}>
                                 <h4 style ={{fontSize: "2rem"}}>Roadmap & Tips</h4>
                                 <Detail
@@ -90,11 +91,11 @@ export default function KeyPage(){
                                         Description={"The feature allows students to learn at their own pace, following the roadmap and utilizing resources as needed, which caters to individual learning styles."}
                                     />
                             </div>
-                        <FeatureMock FeatureMockup={secondFeature}/>
+                        <FeatureMock FeatureMockup="SerkSa/roadtip"/>
                         </div>
                     </MediaQuery>
                     <div className ={style.gamifyFeature}>
-                       <FeatureMock FeatureMockup={reward}/>
+                       <FeatureMock FeatureMockup="SerkSa/reward"/>
                         <div className ={style.gamifyBox}>
                              <h4 style ={{fontSize: "2rem"}}>Reward System</h4>
                              <Detail
@@ -143,9 +144,6 @@ function Detail({Icon,Methods,Description}){
 }
 function FeatureMock({FeatureMockup}){
     return(
-           <img loading="lazy"
-                src={FeatureMockup} 
-                alt="" id={style.gamify}
-           /> 
+            <CloudImage idName={style.gamify} imageName={`${FeatureMockup}`} />
     );
 }

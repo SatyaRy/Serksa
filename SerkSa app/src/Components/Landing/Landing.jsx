@@ -1,9 +1,9 @@
-import robot from "../../assets/icon/Logo2.svg";
+
 import { motion } from "framer-motion";
 import { HashLink } from "react-router-hash-link";
 import {Link} from "react-router-dom"
+import CloudImage from "../../model/Image.jsx"
 import "./Landing.scss"
-import {useMediaQuery} from "react-responsive"
 export default function LandingPage() {
   return (
             <>
@@ -32,15 +32,14 @@ const HandleBig = () => {
                     <button className ="work"><Link to={WaitList}>Register</Link></button>
                     <button className ="learn"><HashLink smooth to ='#about' style ={{color: "black"}}>Learn more</HashLink></button>
                 </div>
-                <div className="animateRobotI">
-                  <motion.img
-                    variants={animation}
-                    initial="hideRobot"
-                    animate="showRobot"
-                    transition="showRobot"
-                    src={robot}
-                    className="robot"/>
-                </div>
+                <motion.div 
+                  variants={animation}
+                  initial="hideRobot"
+                  animate="showRobot"
+                  transition="showRobot"
+                  className="animateRobotI">
+                  <CloudImage className={"robot"} imageName={"SerkSa/landing"}/>
+                </motion.div>
         </div>
       </motion.div>
     </>

@@ -1,5 +1,5 @@
 //react library
-import { useState } from "react";
+import { lazy, useState } from "react";
 //style
 import styles from "./App.module.css";
 import "./styles/Global.scss";
@@ -7,11 +7,12 @@ import "./styles/Global.scss";
 import Navbar from "./Components/Navbar/Navbar.jsx";
 import LandingPage from "./Components/Landing/Landing.jsx"
 import Footer from "./Components/footer/Footer.jsx";
-import ShowFeature from "./Components/Show/showFeature.jsx";
-import AboutPage from "./Components/About/About.jsx";
-import FeaturePage from "./Components/FeaturePage/Feature.jsx";
-import KeyPage from "./Components/KeyPage/KeyPage.jsx";
 import ErrorHandle from "./pages/Error/Error.jsx";
+const About = lazy(()=>import("./Components/About/About.jsx"))
+const Feature = lazy(()=>import("./Components/FeaturePage/Feature.jsx"))
+const Show = lazy(()=>import("./Components/Show/showFeature.jsx"))
+const KeyFeature = lazy(()=>import("./Components/KeyPage/KeyPage.jsx"))
+
 //import react router
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./App.css";
@@ -23,10 +24,10 @@ function App() {
           <div className={styles.nav}> <Navbar /></div>
           <main className={styles.main}>
               <div id="home" className={styles.landing}> <LandingPage /> </div>
-              <div id="about" className={styles.aboutPage}><AboutPage /></div>
-              <div id="feature" className={styles.featurePage}><FeaturePage /></div>
-              <div id="key" className={styles.keyPage}><KeyPage /></div>
-              <div id="service" className={styles.showFeature}><ShowFeature /></div>
+              <div id="about" className={styles.aboutPage}><About /></div>
+              <div id="feature" className={styles.featurePage}><Feature /></div>
+              <div id="key" className={styles.keyPage}><KeyFeature /></div>
+              <div id="service" className={styles.showFeature}><Show /></div>
           </main>
           <div id="contact" className={styles.footer}>
             <Footer />

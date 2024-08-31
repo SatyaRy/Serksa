@@ -73,9 +73,11 @@
 /*gamifyBox section*/
 .smallBoxI{
     display: flex;
+    align-items: center;
     flex-direction: row;
     gap: 20px;
 }
+
 .roadmapTips{
     width: 50%;
     height: 100%;
@@ -161,5 +163,10 @@
 @media (max-width: 1024px) {
     .HeaderText{
         width: 80%;
+    }
+}
+@media (min-width: 768px) {
+    #roadmapFeature{
+        flex-direction: row-reverse;
     }
 }

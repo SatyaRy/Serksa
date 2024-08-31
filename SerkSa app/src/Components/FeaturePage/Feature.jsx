@@ -3,7 +3,6 @@ import style from "./Feature.module.css"
 import {motion} from "framer-motion"
 import { MdNavigateNext } from "react-icons/md";
 import CloudImage from "../../model/Image.jsx"
-import LazyLoad from "react-lazy-load"
 function FeaturePage (){
     return(
         <>  
@@ -48,7 +47,7 @@ const FeatureBox=({title,name,description})=>{
                                  variants={animation}
                                  initial="hidden"
                                  whileHover="visible">
-                                <CloudImage imageName={`${name}`}/>
+                                <CloudImage imageName={`${name}`} modelStyle={{width:"60%"}}/>
                     </motion.div>
                                 <h4>{title}</h4>
                                 <p>{description}</p>

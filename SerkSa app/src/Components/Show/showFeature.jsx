@@ -1,6 +1,6 @@
 
-import style from "./showFeature.module.css"
 import MediaQuery from "react-responsive"
+import CloudImage from "../../model/Image.jsx"
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 // Import Swiper styles
@@ -11,17 +11,10 @@ import 'swiper/css/navigation';
 // import required modules
 import { EffectCards,Autoplay ,Pagination, Navigation} from 'swiper/modules';
 import './styles.css';
-import first from "../../assets/model/1.svg"
-import second from "../../assets/model/2.svg"
-import third from "../../assets/model/3.svg"
-import four from "../../assets/model/4.svg"
-import five from "../../assets/model/5.svg"
-import six from "../../assets/model/6.svg"
-import { SiX } from "react-icons/si";
 export default function ShowFeature(){
     return(
        <>
-          <MediaQuery maxWidth={767}>
+          <MediaQuery maxWidth={760}>
                 <Swiper
                         autoplay={{
                             delay: 2500,
@@ -31,16 +24,17 @@ export default function ShowFeature(){
                         grabCursor={true}
                         modules={[EffectCards,Autoplay]}
                         className="mySwiper">
-                        <SwiperSlide><img src={first} style={{paddingTop:"2vh",width:"65%"}}alt="" /></SwiperSlide>
-                        <SwiperSlide><img src={second} style={{paddingTop:"2vh",width:"65%"}}alt="" /></SwiperSlide>
-                        <SwiperSlide><img src={third} style={{paddingTop:"2vh",width:"65%"}}alt="" /></SwiperSlide>
-                        <SwiperSlide><img src={four} style={{paddingTop:"2vh",width:"65%"}}alt="" /></SwiperSlide>
-                        <SwiperSlide><img src={five} style={{paddingTop:"2vh",width:"65%"}}alt="" /></SwiperSlide>
-                        <SwiperSlide><img src={six} style={{paddingTop:"2vh",width:"65%"}}alt="" /></SwiperSlide>
-                  
+                        {Data.map((value)=>{
+                       return(
+                                <>
+                                    <SwiperSlide key = {value.id} ><CloudImage imageName={value.imageName} modelStyle={{paddingTop:"2vh",width:"auto",height:"100%"}}alt="" /></SwiperSlide>
+                                </>
+                       )
+                        })}
+
                 </Swiper>
           </MediaQuery>
-          <MediaQuery minWidth={768} maxWidth={1200}>
+          <MediaQuery minWidth={768} maxWidth={1024}>
                     <Swiper
                     spaceBetween={10}
                     centeredSlides={true}
@@ -56,17 +50,18 @@ export default function ShowFeature(){
                     className="mySwiper"
                     slidesPerView={1}
                 >   
-                        <SwiperSlide><img src={first} style={{paddingTop:"2vh",width:"100%",height:"100%"}}alt="" /></SwiperSlide>
-                        <SwiperSlide><img src={second} style={{paddingTop:"2vh",width:"100%",height:"100%"}}alt="" /></SwiperSlide>
-                        <SwiperSlide><img src={third} style={{paddingTop:"2vh",width:"100%",height:"100%"}}alt="" /></SwiperSlide>
-                        <SwiperSlide><img src={four} style={{paddingTop:"2vh",width:"100%",height:"100%"}}alt="" /></SwiperSlide>
-                        <SwiperSlide><img src={five} style={{paddingTop:"2vh",width:"100%",height:"100%"}}alt="" /></SwiperSlide>
-                        <SwiperSlide><img src={six} style={{paddingTop:"2vh",width:"100%",height:"100%"}}alt="" /></SwiperSlide>
+                    {Data.map((value)=>{
+                       return(
+                                <>
+                                    <SwiperSlide key = {value.id} ><CloudImage imageName={value.imageName} modelStyle={{paddingTop:"2vh",width:"auto",height:"100%"}}alt="" /></SwiperSlide>
+                                </>
+                       )
+                    })}
                    
                    </Swiper>
           </MediaQuery>
-          <MediaQuery minWidth={1200}>
-                    <Swiper
+          <MediaQuery minWidth={1024}>
+                    <Swiper 
                     spaceBetween={10}
                     centeredSlides={true}
                     autoplay={{
@@ -79,13 +74,83 @@ export default function ShowFeature(){
                     navigation={true}
                     modules={[Autoplay, Pagination, Navigation]}
                     className="mySwiper"
-                    slidesPerView={2}
+                    slidesPerView={1}
                 >   
-                    <SwiperSlide><img src={first} style={{paddingTop:"2vh",width:"100%",height:"100%"}}alt="" /><img src={second} style={{paddingTop:"2vh",width:"100%",height:"100%"}}alt="" /></SwiperSlide>
-                    <SwiperSlide><img src={third} style={{paddingTop:"2vh",width:"100%",height:"100%"}}alt="" /><img src={four} style={{paddingTop:"2vh",width:"100%",height:"100%"}}alt="" /></SwiperSlide>
-                    <SwiperSlide><img src={five} style={{paddingTop:"2vh",width:"100%",height:"100%"}}alt="" /><img src={six} style={{paddingTop:"2vh",width:"100%",height:"100%"}}alt="" /></SwiperSlide>
+                    {Data.map((value)=>{
+                       return(
+                                <>
+                                    <SwiperSlide key = {value.id} >
+                                        <CloudImage imageName={value.imageName} modelStyle={{paddingTop:"2vh",width:"auto",height:"100%"}}alt="" />
+                                    </SwiperSlide>
+                                </>
+                       )
+                    })}
+
                     </Swiper>
           </MediaQuery>
        </> 
     )
 }
+
+const Data=[
+    {
+        id:1,
+        imageName:"SerkSa/auth",
+        paddingTop:"2vh",
+        height:"100%"
+    },
+    {
+        id:2,
+        imageName:"SerkSa/homepage",
+        paddingTop:"2vh",
+        height:"100%"
+    },
+    {
+        id:3,
+        imageName:"SerkSa/student",
+        paddingTop:"2vh",
+        height:"100%"
+    },
+    {
+        id:4,
+        imageName:"SerkSa/leaderboard",
+        paddingTop:"2vh",
+        height:"100%"
+    },
+    {
+        id:5,
+        imageName:"SerkSa/rewarding",
+        paddingTop:"2vh",
+        height:"100%"
+    },
+    {
+        id:6,
+        imageName:"SerkSa/roadmapII",
+        paddingTop:"2vh",
+        height:"100%"
+    },
+    {
+        id:7,
+        imageName:"SerkSa/complex",
+        paddingTop:"2vh",
+        height:"100%"
+    },
+    {
+        id:8,
+        imageName:"SerkSa/quiz",
+        paddingTop:"2vh",
+        height:"100%"
+    },
+    {
+        id:9,
+        imageName:"SerkSa/biology",
+        paddingTop:"2vh",
+        height:"100%"
+    },
+    {
+        id:9,
+        imageName:"SerkSa/biology",
+        paddingTop:"2vh",
+        height:"100%"
+    },
+]

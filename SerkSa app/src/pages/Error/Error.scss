@@ -32,7 +32,9 @@
     }
     .errorImage{
         width: 50%;
+        padding-top: 10vh;
         display: flex;
+        border: solid black;
         img{
             width: 80%;
         }
@@ -71,6 +73,7 @@
         }
         .errorImage{
             width: 100%;
+
         }
     .errorText{
         padding-left: 1vw;

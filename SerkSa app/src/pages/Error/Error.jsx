@@ -1,6 +1,6 @@
 import "../Error/Error.scss"
-import Error from "../../assets/icon/error.svg"
-import { Navigate ,Link} from "react-router-dom";
+import {Link} from "react-router-dom";
+import CloudImage from "../../model/Image.jsx"
 export default function ErrorHandle(){
     const telegramLink = "https://t.me/serksa_admin"
     return(
@@ -16,7 +16,7 @@ export default function ErrorHandle(){
                     </div>
                 </div>
                 <div className ="errorImage">
-                    <img src={Error} onLoad={()=>{console.log("yes")}} alt="" />
+                  <CloudImage imageName={"SerkSa/error"} modelStyle={{width:"500px",height:"500px"}}/>
                 </div>
              </div>
            </>

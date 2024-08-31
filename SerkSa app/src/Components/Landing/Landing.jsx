@@ -67,22 +67,3 @@ const animation = {
     transition: { delay: 1, duration: 0.5 },
   },
 };
-
-const ButtonStyle={
-  backgroundColor: "#9747FF",
-  width: "240px",
-  height:"70px ",
-  border: "none",
-  fontSize: "20px",
-  borderRadius: "8px",
-  color: "white",
-}
-const MobileButton ={
-  backgroundColor: "#9747FF",
-  width: "95%",
-  height:"50px ",
-  border: "none",
-  fontSize: "20px",
-  borderRadius: "8px",
-  color: "white",
-}

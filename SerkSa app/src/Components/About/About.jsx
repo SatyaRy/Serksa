@@ -1,14 +1,9 @@
 import style from "../../Components/About/About.module.css"
-import logo from "../../assets/icon/white.svg"
 import {motion, useInView} from "framer-motion"
 import Wave from "react-wavify"
 import MediaQuery from 'react-responsive'
-import bothPhone from "../../assets/icon/bothphone.svg"
-import LazyLoad from "react-lazy-load"
 import CloudImage from "../../model/Image.jsx"
 export default function AboutPage(){
-    const Logo = logo
-    const phone = bothPhone
     return(
            <>
               <MediaQuery maxWidth={767}>
@@ -22,16 +17,13 @@ export default function AboutPage(){
               <MediaQuery minWidth={768}>
                    <div className ={style.large}>
                         <div className={style.about}>
-                          <LazyLoad onContentVisible={()=>{console.log("yes")}}>
-                            <motion.img 
-                                loading="lazy"
-                                initial={{x:-100}}
-                                whileInView={{x:0}}
-                                transition={{duration: 0.5}}
-                                viewport={{once: true}}
-                                className ={style.phoneI} src={phone} alt="" />
-                          </LazyLoad>
-                        
+                           
+                           <motion.div initial={{x:-100}} whileInView={{x:0}} transition={{duration:0.5}} viewport={{once:true}}>
+                            <CloudImage
+                                    className ={style.phoneI}
+                                    imageName={"SerkSa/Iphone"} />
+                           </motion.div>
+                      
                             <div className ={style.detailSection}>
                                     <Question/>
                                     <motion.p 
@@ -53,7 +45,6 @@ export default function AboutPage(){
 }
 
 function Iphone(){
-    const phone = bothPhone
     const animation={
         hidden:{
            y: 100
@@ -120,10 +111,9 @@ function Wavy(){
     )
 }
 function Question(){
-    const Logo = logo
     return(
             <div className = {style.section}>
-                <img src={Logo} alt="" loading="lazy" />
+                <CloudImage imageName={"SerkSa/serksalogo"}/>
                 <h1 id ={style.headText}>What is SERKSA?</h1>
             </div>
     )
@@ -133,3 +123,20 @@ function Button(){
                 <button className ={style.overviewButton}>See Project Overview</button>
     )
 }
+
+/* test
+    <CloudImage
+    className ={style.phoneI}
+    imageName={"SerkSa/Iphone"}
+  
+    />
+
+
+     <motion.img 
+                                loading="lazy"
+                                initial={{x:-100}}
+                                whileInView={{x:0}}
+                                transition={{duration: 0.5}}
+                                viewport={{once: true}}
+                                className ={style.phoneI} src={phone} alt="" />
+ */

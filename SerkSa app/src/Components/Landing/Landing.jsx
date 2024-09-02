@@ -38,7 +38,7 @@ const HandleBig = () => {
                   animate="showRobot"
                   transition="showRobot"
                   className="animateRobotI">
-                  <CloudImage className={"robot"} imageName={"SerkSa/landing"}/>
+                  <CloudImage className={"robot"} imageName={"SerkSa/landing"} setting={"auto"}/>
                 </motion.div>
         </div>
       </motion.div>

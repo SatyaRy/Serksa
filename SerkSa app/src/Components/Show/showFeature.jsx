@@ -27,7 +27,7 @@ export default function ShowFeature(){
                         {Data.map((value)=>{
                        return(
                                 <>
-                                    <SwiperSlide key = {value.id} ><CloudImage imageName={value.imageName} modelStyle={{paddingTop:"2vh",width:"auto",height:"100%"}}alt="" /></SwiperSlide>
+                                    <SwiperSlide key = {value.id} ><CloudImage imageName={value.imageName} setting={"auto"} modelStyle={{paddingTop:"2vh",width:"auto",height:"100%"}}alt="" /></SwiperSlide>
                                 </>
                        )
                         })}
@@ -53,7 +53,7 @@ export default function ShowFeature(){
                     {Data.map((value)=>{
                        return(
                                 <>
-                                    <SwiperSlide key = {value.id} ><CloudImage imageName={value.imageName} modelStyle={{paddingTop:"2vh",width:"auto",height:"100%"}}alt="" /></SwiperSlide>
+                                    <SwiperSlide key = {value.id} ><CloudImage imageName={value.imageName} setting={"auto"} modelStyle={{paddingTop:"2vh",width:"auto",height:"100%"}}alt="" /></SwiperSlide>
                                 </>
                        )
                     })}
@@ -80,7 +80,7 @@ export default function ShowFeature(){
                        return(
                                 <>
                                     <SwiperSlide key = {value.id} >
-                                        <CloudImage imageName={value.imageName} modelStyle={{paddingTop:"2vh",width:"auto",height:"100%"}}alt="" />
+                                        <CloudImage imageName={value.imageName} setting={"auto"} modelStyle={{paddingTop:"2vh",width:"auto",height:"100%"}}alt="" />
                                     </SwiperSlide>
                                 </>
                        )

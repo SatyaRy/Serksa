@@ -16,7 +16,7 @@ export default function ErrorHandle(){
                     </div>
                 </div>
                 <div className ="errorImage">
-                  <CloudImage imageName={"SerkSa/error"} modelStyle={{width:"500px",height:"500px"}}/>
+                  <CloudImage setting={"auto"} imageName={"SerkSa/error"} modelStyle={{width:"500px",height:"500px"}}/>
                 </div>
              </div>
            </>

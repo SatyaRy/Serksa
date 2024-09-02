@@ -20,6 +20,7 @@ export default function AboutPage(){
                            
                            <motion.div initial={{x:-100}} whileInView={{x:0}} transition={{duration:0.5}} viewport={{once:true}}>
                             <CloudImage
+                                    setting={"auto"}
                                     className ={style.phoneI}
                                     imageName={"SerkSa/Iphone"} />
                            </motion.div>
@@ -63,7 +64,7 @@ function Iphone(){
             whileInView="visible"
             viewport={{once: true}}
             className ={style.iphone}>
-            <CloudImage imageName={"SerkSa/Iphone"}/>
+            <CloudImage imageName={"SerkSa/Iphone"} setting={"auto"}/>
         </motion.div>
     )
 }
@@ -113,7 +114,7 @@ function Wavy(){
 function Question(){
     return(
             <div className = {style.section}>
-                <CloudImage imageName={"SerkSa/serksalogo"}/>
+                <CloudImage imageName={"SerkSa/serksalogo"} setting={"auto"}/>
                 <h1 id ={style.headText}>What is SERKSA?</h1>
             </div>
     )

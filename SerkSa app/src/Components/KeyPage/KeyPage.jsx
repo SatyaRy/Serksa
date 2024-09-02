@@ -8,7 +8,7 @@ export default function KeyPage(){
             <>
                 <div className ={style.container}>
                     <h4>App Features</h4>
-                    <CloudImage modelStyle ={{width: "100%",paddingTop:"2vh"}} imageName={"SerkSa/roadmap"}/>
+                    <CloudImage modelStyle ={{width: "100%",paddingTop:"2vh"}} imageName={"SerkSa/roadmap"} setting={"svg"}/>
                 </div>
                 <div className ={style.containerII}>
                     <h4 className={style.HeaderText}>Let’s see what special about our app features!</h4>
@@ -72,7 +72,7 @@ function Detail({iconName,Methods,Description}){
     return(
          
         <div className ={style.smallBoxI}>
-            <CloudImage imageName ={iconName} modelStyle ={{width: "20%"}}/>
+            <CloudImage imageName ={iconName} modelStyle ={{width: "20%"}} setting={"auto"}/>
             <motion.div className={style.detail}
                     initial={{x:100}}
                     whileInView={{x:0}}
@@ -87,7 +87,7 @@ function Detail({iconName,Methods,Description}){
 }
 function FeatureMock({FeatureMockup}){
     return(
-            <CloudImage idName={style.gamify} imageName={FeatureMockup} modelStyle={{width:"50%",height:"auto"}}/>
+            <CloudImage idName={style.gamify} imageName={FeatureMockup} setting={"auto"} modelStyle={{width:"50%",height:"auto"}}/>
     );
 }
 

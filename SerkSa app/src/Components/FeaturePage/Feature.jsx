@@ -47,7 +47,7 @@ const FeatureBox=({title,name,description})=>{
                                  variants={animation}
                                  initial="hidden"
                                  whileHover="visible">
-                                <CloudImage imageName={`${name}`} modelStyle={{width:"60%"}}/>
+                                <CloudImage imageName={`${name}`} setting={"auto"}  modelStyle={{width:"60%"}}/>
                     </motion.div>
                                 <h4>{title}</h4>
                                 <p>{description}</p>

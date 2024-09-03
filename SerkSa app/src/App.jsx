@@ -10,7 +10,6 @@ import Footer from "./Components/footer/Footer.jsx";
 import ErrorHandle from "./pages/Error/Error.jsx";
 const About = lazy(()=>import("./Components/About/About.jsx"))
 const Feature = lazy(()=>import("./Components/FeaturePage/Feature.jsx"))
-const Show = lazy(()=>import("./Components/Show/showFeature.jsx"))
 const KeyFeature = lazy(()=>import("./Components/KeyPage/KeyPage.jsx"))
 
 //import react router
@@ -27,7 +26,6 @@ function App() {
               <div id="about" className={styles.aboutPage}><About /></div>
               <div id="feature" className={styles.featurePage}><Feature /></div>
               <div id="key" className={styles.keyPage}><KeyFeature /></div>
-              <div id="service" className={styles.showFeature}><Show /></div>
           </main>
           <div id="contact" className={styles.footer}>
             <Footer />

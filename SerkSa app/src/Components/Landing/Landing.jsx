@@ -28,7 +28,7 @@ const HandleBig = () => {
               We created a gamified app to enhance high school learning experiences.
             </h4>
             <div className="buttonText">
-                <div className="button">
+                <div className="twoButton">
                     <button className ="work"><Link to={WaitList}>Register</Link></button>
                     <button className ="learn"><HashLink smooth to ='#about' style ={{color: "black"}}>Learn more</HashLink></button>
                 </div>
@@ -40,7 +40,7 @@ const HandleBig = () => {
                   className="animateRobotI">
                   <CloudImage className={"robot"} imageName={"SerkSa/landing"} setting={"auto"}/>
                 </motion.div>
-        </div>
+             </div>
       </motion.div>
     </>
   );

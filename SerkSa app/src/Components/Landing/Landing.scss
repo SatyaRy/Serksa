@@ -30,17 +30,14 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-
-
 }
-.button{
+.twoButton{
     display: flex;
     height: auto;
     margin-top: 5vh;
     z-index: 99999;
     gap: 20px;
     width: 100%;
-    padding-right: 5vw;
     padding-bottom: 5vh;
     justify-content: center;
     align-items: center;
@@ -90,22 +87,6 @@
 
 
 /*media query for mobile pre-defined*/
-  /* xs */
-  @media (max-width: 475px){
-   
-  }
-  @media (min-width: 475px) {
- 
-
-  }
-  
-
-  /* md */
-  @media (min-width: 768px) {
-
-  }
-  
-  /* lg */
   @media (min-width: 1024px) {
     .robot{
         width: 100%;
@@ -127,7 +108,7 @@
     .application{
         font-size: 2rem;
     }
-    .button{
+    .twoButton{
         padding-left: 10vh;
         flex-direction: row;
     }
@@ -135,39 +116,31 @@
 
   }
   
-  /* xl */
-  @media (min-width: 1280px) {}
-  
-  /* 2xl */
-  @media (min-width: 1536px) {
-   
-  }
   @media (max-width: 600px) {
     .Mainlanding{
      text-align: start;
      align-items: start;
     }
-    .button{
+    .twoButton{
         display: flex;
-        flex-direction: column;
-        padding-left: 5vw;
-        width: 100%;
-        height: auto;
+        padding-top: 5vh;
+        align-items: center;
         justify-content: center;
-        align-items:center;
+        flex-direction: column;
+        gap: 20px;
+     
     }
     .robot{
         width: 100%;
         height: 30vh;
         margin-top: 3vh;
-
     }
     .work{
-        width: 95%;
+        width: 90%;
         height: 50px;
     }
     .learn{
-        width: 95%;
+        width: 90%;
         height: 50px;
     }
     .description{
@@ -189,6 +162,3 @@
         object-fit: none;
     }
   }
-  @media (max-width: 430px) {
-  }
- 

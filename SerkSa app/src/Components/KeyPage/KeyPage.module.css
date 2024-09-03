@@ -54,6 +54,7 @@
 .gamifyFeature{
     width: 100%;
     height: auto;
+    height: auto;
     display: flex;
 }
 #gamify{
@@ -75,6 +76,7 @@
     display: flex;
     align-items: center;
     flex-direction: row;
+    width: 100%;
     gap: 20px;
 }
 

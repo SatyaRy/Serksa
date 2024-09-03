@@ -9,7 +9,7 @@ function FeaturePage (){
                <div className ={style.container}>
                 <h4 className ={style.top}>Project Overview</h4>
                     <div className ={style.mainBoxI}>
-                            <FeatureBox title={"Problem Statement"} name ={"SerkSa/boy"} description={paragraph.problem}/>
+                            <FeatureBox title={"Problem Statement"} name ={"cuteboy"} description={paragraph.problem}/>
                             <FeatureBox title={"Solution"} name ={"SerkSa/think"} description={paragraph.solution}/>
                             <FeatureBox title={"Deliverable"} name ={"SerkSa/board"} description={paragraph.deliverable}/>
                     </div>
@@ -47,7 +47,7 @@ const FeatureBox=({title,name,description})=>{
                                  variants={animation}
                                  initial="hidden"
                                  whileHover="visible">
-                                <CloudImage imageName={`${name}`} setting={"auto"}  modelStyle={{width:"60%"}}/>
+                                <CloudImage imageName={`${name}`} setting={"auto"}  modelStyle={{width:"auto"}}/>
                     </motion.div>
                                 <h4>{title}</h4>
                                 <p>{description}</p>

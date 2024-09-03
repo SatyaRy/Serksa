@@ -87,7 +87,7 @@ function Detail({iconName,Methods,Description}){
 }
 function FeatureMock({FeatureMockup}){
     return(
-            <CloudImage idName={style.gamify} imageName={FeatureMockup} setting={"auto"} modelStyle={{width:"50%",height:"auto"}}/>
+            <CloudImage idName={style.gamify} imageName={FeatureMockup} setting={"auto"} />
     );
 }
 

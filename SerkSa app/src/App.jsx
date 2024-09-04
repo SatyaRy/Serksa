@@ -11,7 +11,7 @@ import ErrorHandle from "./pages/Error/Error.jsx";
 const About = lazy(()=>import("./Components/About/About.jsx"))
 const Feature = lazy(()=>import("./Components/FeaturePage/Feature.jsx"))
 const KeyFeature = lazy(()=>import("./Components/KeyPage/KeyPage.jsx"))
-
+import SignIn from "./pages/Sign/Sign.jsx"
 //import react router
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./App.css";
@@ -56,6 +56,10 @@ function App() {
       path: "/development",
       element: <ErrorHandle />,
     },
+    {
+      path:"waitlist",
+      element: <SignIn/>
+    }
   ]);
 
   return (

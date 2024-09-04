@@ -29,7 +29,7 @@ const HandleBig = () => {
             </h4>
             <div className="buttonText">
                 <div className="twoButton">
-                    <button className ="work"><Link to={WaitList}>Register</Link></button>
+                    <button className ="work"><Link to="waitlist">Register</Link></button>
                     <button className ="learn"><HashLink smooth to ='#about' style ={{color: "black"}}>Learn more</HashLink></button>
                 </div>
                 <motion.div 

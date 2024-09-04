@@ -1,0 +1,189 @@
+
+.container{
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    padding-left: 10vh;
+    padding-right: 10vh;
+    align-items: center;
+}
+.Modal{
+    position: absolute;
+    width: 100%;
+    padding-left: 25vh;
+    padding-top: 5vh;
+}
+.mainBox{
+    width: 50%;
+    height: 100%;
+}
+.mainBox{
+    display: flex;
+    flex-direction: column;
+    padding: 100px;
+    justify-content: center;
+    width: 50%;
+    gap: 20px;
+    span{
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+    .detail{
+        justify-content: space-between;
+        height: 60px;
+        display: flex;
+        gap: 20px;
+        input{
+            width: 50%;
+            border: solid rgb(190, 188, 188);
+            border-radius: 5px;
+            padding-left: 2vw;
+            outline: none;
+            font-size: 1rem;
+        }
+    }
+}
+
+#email{
+    height: 60px;
+    font-size: 1rem;
+    border: solid rgb(190, 188, 188);
+    padding-left: 2vw;
+    border-radius: 5px;
+    outline: none;
+}
+.image{
+    width: 50%;
+}
+.mainBoxII{
+    padding-top: 3vw;
+    width: 50%;
+    height: 100%;
+    padding-left: 5vw;
+    .earlyDetail{
+        width: 100%;
+        height: auto;
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+        span{
+            &:first-child{
+                font-weight: 600;
+                font-size: 1.7rem;
+            }
+        }
+    }
+}
+.submitStyle{
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    button{
+        border: none;
+        width: 50%;
+        border-radius: 10px;
+        font-size: 1.2rem;
+        color: white;
+        background: linear-gradient(30deg, #514eff,#9E1DC4, #DA24BA);
+        &:hover{
+            font-weight: 700;
+        }
+    }
+}
+.text{
+    background: linear-gradient(30deg, #514eff,#9E1DC4, #DA24BA);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+#homeButton{
+    width: 100%;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    color: white;
+    background: #5EACFF;
+}
+@media (max-width: 1536px) {}
+
+/* xl */
+@media (max-width: 1280px) {
+    .mainBox{
+     
+        padding: 0px;
+        padding-left: 6vw;
+        padding-right: 6vw;
+        padding-top: 2vh;
+    }
+   
+}
+
+/* lg */
+@media (max-width: 1024px) {
+    .container{
+        flex-direction: column;
+        height: auto;
+        padding: 0px;
+    }
+    .mainBox{
+        width: 100%;
+    }
+    .mainBoxII{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+    #email{
+        font-size: 1rem;
+    }
+    #detail{
+        font-size: 1rem;
+    }
+}
+
+/* md */
+@media (max-width: 768px) {
+    .container{
+        padding-left: 3vw;
+        padding-right: 3vw;
+    }
+    .mainBox{
+        .detail{
+            display: flex;
+            flex-direction: column;
+            height: 150px;
+            input{
+                height: 60px;
+                width: 100%;
+                height: 60px;
+            }
+        }
+    }
+    .Modal{
+        padding-left: 15vh;
+    }
+}
+
+/* sm */
+@media (max-width: 640px) {
+    .container{
+        padding-left: 6vw;
+        padding-right: 6vw;
+    }
+    .mainBox{
+        padding: 0px;
+        padding-top: 5vw;
+    }
+    .mainBoxII{
+        padding-bottom: 5vw;
+    }
+    .earlyDetail{
+        span{
+            font-size: 1rem;
+        }
+    }
+}
+
+/* xs */
+@media (max-width: 475px) {}

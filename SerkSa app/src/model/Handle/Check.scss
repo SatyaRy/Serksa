@@ -1,0 +1,20 @@
+.boxI{
+    display: flex;
+    width: 250px;
+    height: 70px;
+    gap: 20px;
+    border: solid rgb(76, 194, 133);
+    border-radius: 10px;
+    background-color: aliceblue;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Times New Roman', Times, serif;
+    span{
+        font-size: 1.5rem;
+    }
+    #progress{
+        height: 50px;
+        color: green;
+        width: 50px;
+    }
+}

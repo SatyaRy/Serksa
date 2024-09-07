@@ -115,18 +115,3 @@ function GamifyBox({firstIcon, firstMethods,firstDes,type,secondIcon,secondMetho
             </>
     )
 }
-/*  test
-    <motion.span 
-        initial={{y:100}}
-        whileInView={{y:0}}
-        transition={{duration:0.5}}
-        viewport={{once: true}}>
-        <CloudName imageName={`${iconeName}`} src={Icon} alt="" style={{width:"20%"}}/>
-    </motion.span>
-     <motion.span
-                initial={{y:100}}
-                whileInView={{y:0}}
-                transition={{duration:0.5}}
-                viewport={{once: true}}>
-                </motion.span>
-*/

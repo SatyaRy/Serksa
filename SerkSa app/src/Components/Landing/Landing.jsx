@@ -12,6 +12,8 @@ export default function LandingPage() {
   );
 }
 
+
+
 const HandleBig = () => {
   const WaitList = "https://forms.gle/e7MvMrJNAo7dZ5jZ8";
   return (
@@ -30,7 +32,7 @@ const HandleBig = () => {
             <div className="buttonText">
                 <div className="twoButton">
                     <button className ="work"><Link to="waitlist">Register</Link></button>
-                    <button className ="learn"><HashLink smooth to ='#about' style ={{color: "black"}}>Learn more</HashLink></button>
+                    <button className ="learn"><Link  to ='/welcome' style ={{color: "black"}}>Learn more</Link></button>
                 </div>
                 <motion.div 
                   variants={animation}

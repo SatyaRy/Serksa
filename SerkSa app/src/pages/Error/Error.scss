@@ -2,10 +2,12 @@
     font-family: sf-pro;
     src: url("../../assets/SF-Pro.ttf");
 }
-.container{
+.errorContainer{
     width: 100%;
     height: 100vh;
     display: flex;
+    justify-content: start;
+    align-items: st;
     font-family: sf-pro;
     .errorText{
         padding-left: 5vw;
@@ -38,7 +40,7 @@
             width: 80%;
         }
     }
-    .button{
+    .allButton{
         padding-top: 1vh;
         display: flex;
         justify-content: start;
@@ -63,7 +65,7 @@
 }
 
 @media (max-width: 1023px) {
-    .container{
+    .errorContainer{
         flex-direction: column-reverse;
         height: auto;
         padding: 20px;
@@ -88,19 +90,17 @@
         }
         }
     }
-    .button{
+    .allButton{
         width: 100%;
-        margin:0px;
-        padding: 0px;
         align-items: start;
         flex-direction: column;
     }
 }
 @media (min-width: 1200px) {
-    .button{
-        width: 100%;
+    .allButton{
+        margin:0px;
         padding: 0px;
-        margin: 0px;
+        width: 100%;
         align-items: start;
     }
 }

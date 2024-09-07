@@ -41,7 +41,7 @@ export default function Sign(){
             }
         }
     }
-    {setTimeout(()=>{setShow(false)},5000)}
+    {setTimeout(()=>{setShow(false)},7000)}
 
     return(
             <>

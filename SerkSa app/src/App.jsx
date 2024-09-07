@@ -2,7 +2,6 @@
 import { lazy, useState } from "react";
 //style
 import styles from "./App.module.css";
-import "./styles/Global.scss";
 //components
 import Navbar from "./Components/Navbar/Navbar.jsx";
 import LandingPage from "./Components/Landing/Landing.jsx"
@@ -12,6 +11,7 @@ const About = lazy(()=>import("./Components/About/About.jsx"))
 const Feature = lazy(()=>import("./Components/FeaturePage/Feature.jsx"))
 const KeyFeature = lazy(()=>import("./Components/KeyPage/KeyPage.jsx"))
 import SignIn from "./pages/Sign/Sign.jsx"
+import Welcome from "./pages/Welcome/Welcome.jsx"
 //import react router
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./App.css";
@@ -57,8 +57,12 @@ function App() {
       element: <ErrorHandle />,
     },
     {
-      path:"waitlist",
+      path:"/waitlist",
       element: <SignIn/>
+    },
+    {
+      path:"/welcome",
+      element: <Welcome/>
     }
   ]);
 

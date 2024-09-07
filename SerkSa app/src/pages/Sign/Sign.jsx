@@ -52,7 +52,7 @@ export default function Sign(){
                     className="Modal">   
                    <SuccessModal status={show? 100:0}/>
                 </motion.div>
-                <div className ="container">
+                <div className ="signContainer">
                     <div className ="mainBox">
                         <span >Register for early access <span className ="text">(Limited Spot)</span></span>
                         <span style ={{paddingBottom:"1vw",fontWeight:"400",fontSize:"1rem"}}>Be among the first to explore and use SerkSa, gaining insights into its features before anyone else.</span>

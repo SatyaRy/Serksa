@@ -47,6 +47,11 @@
 }
 @media (max-width: 768px) {
     .surveyBox{
+        justify-content: center;
+        align-items: center;
         width: 100%;
+        .smallBox{
+            width: 90%;
+        }
     }
 }

@@ -10,17 +10,27 @@
     height: 10px;
     border-radius: 10px;
     border: none;
-    background-color: grey;
+    background-color: #FAF8F1;
     .progressPercentage{
         width: 0%;
         height: 100%;
         border-radius: 10px;
         transition: all 1s ease;
-        background-color: #1230AE;
+        background: #514eff;
+    }
+}
+@media (max-width: 1024px) {
+    .progress{
+        width: 70%;
     }
 }
 @media (max-width: 768px) {
     .progress{
         width: 80%;
+    }
+}
+@media (max-width: 468px) {
+    .progress{
+        width: 85%;
     }
 }

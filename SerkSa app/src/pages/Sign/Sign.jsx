@@ -11,9 +11,11 @@ export default function Sign(){
     const [firstName, setFirstName] = useState("")
     const [lastName, setLastName] = useState("")
     const [email, setEmail] = useState("")
-    const [grade, setGrade] = useState("")
+    const [grade, setGrade] = useState("Grade 12")
     const [show,setShow] = useState(false)
-    console.log(grade)
+    const [high, setHigh] = useState("")
+    const [submit, setSubmit] =useState(true)
+    console.log(firstName)
     const HandleSubmit= async(e)=>{
         setShow(true);
         e.preventDefault(); 
@@ -23,6 +25,7 @@ export default function Sign(){
                 lastName: lastName,
                 email: email,
                 grade: grade,
+                highSchool: high,
             })
         }
         catch(error){
@@ -45,13 +48,15 @@ export default function Sign(){
 
     return(
             <>
+               {firstName!="" && lastName !="" && email!="" && high !="" &&
                 <motion.div 
                     variants={animation}
                     initial="hidden"
                     animate={show? "visible":""}
                     className="Modal">   
-                   <SuccessModal status={show? 100:0}/>
+                  <SuccessModal status={show ? 100:0} colorStatus={"green"} message={"Success"}/>
                 </motion.div>
+               }
                 <div className ="signContainer">
                     <div className ="mainBox">
                         <span >Register for early access <span className ="text">(Limited Spot)</span></span>
@@ -62,8 +67,9 @@ export default function Sign(){
                                 <input id ="detail" type="text" placeholder="Last Name" value ={lastName} onChange={(e)=>setLastName(e.target.value)}/>
                             </div>
                             <input id ="email" type="email" placeholder="Email" value ={email} onChange={(e)=>setEmail(e.target.value)} />
+                            <input id ="email" type="text" placeholder="High School Name" value ={high} onChange={(e)=>setHigh(e.target.value)} />
                             <select name="" id="" style ={selectStyle} onChange={(e)=>setGrade(e.target.value)}>
-                               {data.map((value,index)=>{
+                               {Grade.map((value,index)=>{
                                 return(
                                         <>
                                             <option key ={index} value={value.grade}>{value.grade}</option>
@@ -73,7 +79,7 @@ export default function Sign(){
                             </select>
                             <div className ="submitStyle">
                                 <HashLink to ="/" style ={{width: "50%"}}><button id ="homeButton" >Home</button></HashLink>
-                                <button   type="submit" onClick={HandleSubmit} style={{border:show? "2px solid #050C9C":"none"}} >Submit</button>
+                                <button  type="submit" onClick={HandleSubmit}   style={{border:show? "2px solid #050C9C":"none"}} >Submit</button>
                             </div>
                         </form>
                     </div>
@@ -119,4 +125,24 @@ const data=[
         paragraph: "Be Part of a SerkSa's Community",
         grade: "University Student"
     }
+]
+const Grade=[
+    {
+        grade: "Grade 12"
+    },
+    {
+        grade: "Grade 11"
+    },
+    {
+        grade: "Grade 10"
+    },
+    {
+        grade: "Grade 9"
+    },
+    {
+        grade: "Grade 8"
+    },
+    {
+        grade: "Grade 7"
+    },
 ]

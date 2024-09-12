@@ -3,6 +3,7 @@ import { lazy, useState } from "react";
 //style
 import styles from "./App.module.css";
 //components
+import Team from "./Components/Team/Team.jsx"
 import Navbar from "./Components/Navbar/Navbar.jsx";
 import LandingPage from "./Components/Landing/Landing.jsx"
 import Footer from "./Components/footer/Footer.jsx";
@@ -26,6 +27,12 @@ function App() {
               <div id="about" className={styles.aboutPage}><About /></div>
               <div id="feature" className={styles.featurePage}><Feature /></div>
               <div id="key" className={styles.keyPage}><KeyFeature /></div>
+              <div id="team" className={styles.teamPage}>
+                <div id ={styles.teamMembers}>
+                  <span id ={styles.captions}>Team Member</span>
+                </div>
+                <Team />
+              </div>
           </main>
           <div id="contact" className={styles.footer}>
             <Footer />

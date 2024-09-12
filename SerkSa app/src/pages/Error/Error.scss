@@ -46,20 +46,11 @@
         justify-content: start;
         gap: 20px;
         button{
-            &:first-child{
-                border: none;
-                border-radius: 10px;
-                font-size: 1.5rem;
-                color: white;
-                background: linear-gradient(30deg, #514eff,#9E1DC4, #DA24BA);
-            }
-            &:nth-child(2){
-                border: none;
-                border-radius: 10px;
-                font-size: 1.5rem;
-                color: white;
-                background: linear-gradient(30deg, #514eff,#9E1DC4, #DA24BA);
-            }
+            border: none;
+            border-radius: 10px;
+            font-size: 1.5rem;
+            color: white;
+            background: linear-gradient(30deg, #514eff,#9E1DC4, #DA24BA);
         }
     }
 }

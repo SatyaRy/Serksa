@@ -1,48 +1,67 @@
-import {useState,useEffect} from "react"
+import {useState,useCallback,useEffect} from "react"
 import "./Welcome.scss"
 import {WelcomeData} from "../../data/WelcomeData.jsx"
 import {Robot} from "../../model/Robot/Robot.jsx"
 import {ProgressBar} from "../../model/Progress/Progress.jsx"
-import { Link } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 export default function Welcome(){
+    //logic
     const [click, setClick] = useState(false)
     const [width, setWidth] = useState(0)
     const [index, setIndex] = useState(0)
-    const HandleClick=()=>{
+    const [boxId,setBoxId] = useState(null)
+    const [check, setCheck] = useState(true)
+    const HandleClick=(event)=>{
         setClick(!click)
         setWidth(width+25)
         if(width >=100){
             setWidth(0)
         }
         setIndex(c=>c+1)
+        setCheck(!check)
     }
-    const {question,option} = WelcomeData[index]
-    console.log(question)
+    const HandleBoxClick= useCallback((id)=>{
+        setCheck(true)
+        setBoxId(id)
+    },[setCheck])
+    const navigate = useNavigate()
+    useEffect(()=>{
+        if(index>4){
+            setWidth(100)
+            setTimeout(()=>navigate("/waitlist"),2000)
+        }
+    })
+    console.log(index)
+    const {question,option} = WelcomeData[index <5? index: 0]
     return(
             <>
                 <div className ="container">
-                    <ProgressBar width={width}/>
-                    <div className ="surveyBox">
-                    <div className ="modal">
-                        <Robot/>
-                        <div className ="box">
-                            <span>{question}</span>
+                   <div className ="modalContainer">
+                        <ProgressBar width={width}/>
+                        <div className ="modal">
+                                <Robot/>
+                                <div className ="box">
+                                    <span>{question}</span>
+                                </div>
                         </div>
-                    </div>
-                    <div className ="smallBox">{option[0].methods}</div>
-                    <div className ="smallBox">{option[1].methods}</div>
-                    <div className ="smallBox">{option[2].methods}</div>
-                    <div className ="smallBox">{option[3].methods}</div>
+                   </div>
+                    <div className ="surveyBox">
+                       {index <=4 && option.map((value,index)=>{
+                        return (
+                                <>
+                                   <div  key ={index}  onClick ={()=>HandleBoxClick(value.id)}  style ={{border: value.id ===boxId && check ? "solid blue":"solid grey"}} className ="smallBox">{value.methods}</div>
+                                </>
+                        )
+                       })}
+                       {index >4 && (
+                            <>
+                                <div>We will direct you to waitlist page</div>
+                            </>
+                       )}
+                       
                     </div>
                    <div className ="welcomeButton">
-                        {index<4 && (
-                             <button onMouseMove={()=>{setClick(false)}}onClick ={HandleClick} style ={{boxShadow:click? "none":"2px 2px 0px grey"}}>Continue</button>
-                        )}
-                        {index===4&& (
-                                <>
-                                    <Link to ="/"><button onMouseMove={()=>{setClick(false)}} style ={{boxShadow:click? "none":"2px 2px 0px grey"}}>Home</button></Link>
-                                </>
-                        )}
+                         {<button onClick ={HandleClick} style ={{boxShadow:click? "none":"3px 4px 0px grey "}}>Continue</button>}
                    </div>
                 </div> 
             </>

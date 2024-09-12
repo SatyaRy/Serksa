@@ -7,23 +7,39 @@
     flex-direction: column;
     width: 100%;
     height: 100vh;
-    gap: 50px;
+    gap: 20px;
     padding-bottom: 2vh;
 }
 .surveyBox{
-    width: 50%;
-    height: 100%;
-    gap: 20px;
+    width: 40%;
+    height: auto;
+    gap: 25px;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    padding-top: 2vh;
+    justify-content: start;
     .smallBox{
         width: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 20%;
+        height: 70px;
         border-radius: 10px;
         border: solid grey;
+        &:hover{
+            border: solid #1230AE;
+        }
+    }
+    .activeBox{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 70px;
+        border-radius: 10px;
+        border: solid blue;
+       
     }
 }
 .welcomeButton{
@@ -34,24 +50,38 @@
     button{
         width: 200px;
         height: 50px;
-        background-color: #1230AE;
+        background:#514eff;
         color: white;
-        box-shadow: 2px 2px 0px black;
-        border: solid white;
+        border-radius: 10px;
+        border:none;
     }
 }
-.modal{
+.modalContainer{
     width: 100%;
     display: flex;
-    justify-content: start;
+    flex-direction: column;
+    gap: 20px;
+    .modal{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
 }
 @media (max-width: 768px) {
     .surveyBox{
-        justify-content: center;
-        align-items: center;
-        width: 100%;
+        width: 60%;
+    }
+}
+@media (max-width: 1024px) {
+    .surveyBox{
+        width: 70%;
+    }
+}
+@media (max-width: 468px) {
+    .surveyBox{
+        width: 80%;
         .smallBox{
-            width: 90%;
+            height: 60px;
         }
     }
 }

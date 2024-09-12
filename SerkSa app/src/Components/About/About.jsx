@@ -2,7 +2,9 @@ import style from "../../Components/About/About.module.css"
 import {motion, useInView} from "framer-motion"
 import Wave from "react-wavify"
 import MediaQuery from 'react-responsive'
+import {Link} from "react-router-dom"
 import CloudImage from "../../model/Image.jsx"
+const prototype = "https://www.figma.com/proto/H6B8cXN8wvX6HCTNBKcLGg/Serksa-Application?node-id=0-1&t=d2TYGjYXao1JiC2f-1"
 export default function AboutPage(){
     return(
            <>
@@ -10,7 +12,10 @@ export default function AboutPage(){
                     <div className ={style.question} >
                         <Question/>
                         <Paragraph/>
-                        <Iphone/>
+                        <div style ={{display:"flex",flexDirection:"column", gap:"60px", justifyContent:"center"}}>
+                            <Button position={"center"} width={"100%"}/>
+                            <Iphone/>
+                        </div>
                         <Wavy/>
                     </div>
                 </MediaQuery>
@@ -33,7 +38,7 @@ export default function AboutPage(){
                                     transition={{duration: 0.5}}
                                     viewport={{once: true}}
                                     className ={style.paragraph}>SerkSa is a gamified app that transforms self-learning for high school students with structured lessons, foundational skill-building, and interactive games that keep them motivated.</motion.p>
-                                    <Button/>
+                                    <Button  position={"start"} width={"200px"}/>
                             </div>
                         </div>
                         <div className={style.wave}>
@@ -119,9 +124,9 @@ function Question(){
             </div>
     )
 }
-function Button(){
+function Button({position,width}){
     return(
-                <button className ={style.overviewButton}>See Project Overview</button>
+               <Link to ={prototype} style={{width:"100%", display:"flex",justifyContent:`${position}`, paddingRight: "5vw"}}><button className ={style.overviewButton} style ={{borderRadius:"8px",width:`${width}`}}>See Our Prototype</button></Link>
     )
 }
 

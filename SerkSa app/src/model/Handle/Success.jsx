@@ -2,14 +2,14 @@ import { useState } from "react";
 import "./Check.scss"
 import { CircularProgressbar } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
-export default function SuccessModal({status}){
+export default function SuccessModal({status,message,colorStatus}){
     return(
             <>
                 <div className ="boxI">
-                    <div id ="progress">
+                    <div id ="progress" style ={{color: {colorStatus}}}>
                         <Progress status={status}/>
                     </div>
-                    <span>SuccessFully</span>
+                    <span>{message}</span>
                 </div>
             </>
     )

@@ -58,7 +58,7 @@ const Progress=({status})=>{
                         },
                         // Customize background - only used when the `background` prop is true
                         background: {
-                        fill: 'green',
+                        fill: 'red',
                         },
                     }}/>
             </>

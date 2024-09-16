@@ -31,8 +31,8 @@
     }
     .detail{
         justify-content: space-between;
-        height: 60px;
         display: flex;
+        height: 60px;
         gap: 20px;
         input{
             width: 50%;
@@ -109,6 +109,10 @@
     color: white;
     background: #5EACFF;
 }
+#errorModal{
+    color: red;
+    font-size: 1rem;
+}
 @media (max-width: 1536px) {}
 
 /* xl */
@@ -157,7 +161,7 @@
         .detail{
             display: flex;
             flex-direction: column;
-            height: 150px;
+            height:auto;
             input{
                 height: 60px;
                 width: 100%;

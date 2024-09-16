@@ -65,12 +65,14 @@ function App() {
     },
     {
       path:"/waitlist",
-      element: <SignIn/>
+      element: <SignIn/>,
     },
     {
       path:"/welcome",
       element: <Welcome/>
-    }
+    },
+
+
   ]);
 
   return (

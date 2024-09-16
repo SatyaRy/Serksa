@@ -1,9 +1,10 @@
 import { getFirestore } from "firebase/firestore";
 import { initializeApp } from "firebase/app";
 const firebaseConfig = {
-  apiKey: "AIzaSyCqD_agmTxK-4X5HmD-_KLmb5JJlXh2vi4",
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
   authDomain: "serksaapp.firebaseapp.com",
   projectId: "serksaapp",
+  databaseURL: "https://serksaapp-default-rtdb.firebaseio.com/",
   storageBucket: "serksaapp.appspot.com",
   messagingSenderId: "779181962403",
   appId: "1:779181962403:web:ec0fe7d66392c936623b16",
